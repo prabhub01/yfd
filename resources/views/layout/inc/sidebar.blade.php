@@ -66,8 +66,8 @@ $secondParam = Request::segment(2);
            <span>Hear From Our Members </span></a>
    </li>
 
-   <li class="nav-item {{ $secondParam == 'contact' ? 'active' : '' }}">
-       <a class="nav-link" href="" style="padding: 5px 0px 5px 20px;">
+   <li class="nav-item {{ $secondParam == 'testimonial' ? 'active' : '' }}">
+       <a class="nav-link" href="{{ route('admin.testimonial.index') }}" style="padding: 5px 0px 5px 20px;">
            <i class="fab fa-wpforms"></i>
            <span>Testimonial </span></a>
    </li>
