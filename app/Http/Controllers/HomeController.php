@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,9 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $testimonial = Testimonial::where('is_active', 1)->get();
         $blog = Blog::where('is_active', 1)->latest()->take(3)->get();
         return view('frontend.index', compact(
-            'blog'
+            'blog', 'testimonial'
         ));
     }
 }

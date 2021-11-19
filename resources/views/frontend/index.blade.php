@@ -699,15 +699,18 @@
                                         <a href="{{ route('blog-details', $blogs->slug) }}">
                                             <h6 class="card-text">{{ $blogs->title }} </h6>
                                         </a>
-                                        <p style="text-align: justify; font-size: 14px; margin-top: 5px;">{!! Str::limit($blogs->description, 250) !!}</p>
+                                        <p style="text-align: justify; font-size: 14px; margin-top: 5px;">
+                                            {!! Str::limit($blogs->description, 250) !!}</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group" style="padding-top: 20px;">
                                                 <div style="float: left;">
                                                     <small>
                                                         <i class="far fa-calendar-alt" style="color: rgb(50, 85, 243);"></i>
-                                                        <span style="color: rgb(37, 37, 37);"> {{ $blogs->date }} </span> &nbsp;
+                                                        <span style="color: rgb(37, 37, 37);"> {{ $blogs->date }} </span>
+                                                        &nbsp;
                                                         <i class="fas fa-user-edit" style="color: rgb(50, 85, 243);"></i>
-                                                        <span style="color: rgb(37, 37, 37);"> {{ $blogs->writer }} </span> &nbsp;
+                                                        <span style="color: rgb(37, 37, 37);"> {{ $blogs->writer }}
+                                                        </span> &nbsp;
                                                     </small>
                                                 </div>
                                             </div>
@@ -741,67 +744,89 @@
                 <div class="row">
                     <div class="col-12">
                         <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Slide Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#testimonialCarousel" data-slide-to="1"></li>
-                                <li data-target="#testimonialCarousel" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <!-- Slide 1 -->
-                                <div class="carousel-item active">
-                                    <div class="carousel-content">
-                                        <div class="client-img"><img src="{{ asset('img/team/team1.png') }}"
-                                                alt="Testimonial Slider"></div>
-                                        <h3>Suraj Karki </h3>
-                                        <span> <small> Marriot Group, Kathmandu</small> </span>
-                                        <p class="col-md-8 offset-md-2">Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Porro doloribus dolorum ipsum esse possimus necessitatibus velit
-                                            molestias. Accusantium, corporis facilis necessitatibus earum cumque autem
-                                            deleniti beatae dolor adipisci modi voluptas!</p>
-                                    </div>
+                            @if (isset($testimonial) && !$testimonial->isEmpty())
+                                <!-- Slide Indicators -->
+                                <ol class="carousel-indicators">
+                                    @foreach ($testimonial as $key => $testimonials)
+                                        <li data-target="#testimonialCarousel" data-slide-to="{{ $key }}"
+                                            class="@if ($key == 0) active @endif">
+                                        </li>
+                                    @endforeach
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    @foreach ($testimonial as $key => $testimonials)
+                                        <!-- Slide 1 -->
+                                        <div class="carousel-item @if ($key == 0) active @endif">
+                                            <div class="carousel-content">
+                                                <div class="client-img"><img
+                                                        src="{{ url('/uploads/testimonial/' . $testimonials->image) }}"
+                                                        alt="Testimonial Slider"></div>
+                                                <h3>{{ $testimonials->name }} </h3>
+                                                <span> <small> <em> {{ $testimonials->company }},
+                                                        {{ $testimonials->location }}</em></small> </span>
+                                                <p class="col-md-8 offset-md-2" style="padding-top: 10px;">{{ $testimonials->description }}</p>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                    <!-- Slider pre and next arrow -->
+                                    <a class="carousel-control-prev text-white" href="#testimonialCarousel" role="button"
+                                        data-slide="prev">
+                                        <i class="fas fa-chevron-left" style="color: #000;"></i>
+                                    </a>
+                                    <a class="carousel-control-next text-white" href="#testimonialCarousel" role="button"
+                                        data-slide="next">
+                                        <i class="fas fa-chevron-right" style="color: #000;"></i>
+                                    </a>
                                 </div>
-                                <!-- Slide 2 -->
-                                <div class="carousel-item">
-                                    <div class="carousel-content">
-                                        <div class="client-img"><img src="{{ asset('img/team/team2.png') }}"
-                                                alt="Testimonial Slider"></div>
-                                        <h3>Rajnish Kumar <br><span>India</span></h3>
-                                        <p class="col-md-8 offset-md-2">It is a long established fact that a reader will be
-                                            distracted by the readable content of a page when looking at its layout. The
-                                            point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                                            letters, as opposed to using ‘Content here, content here’, making it look like
-                                            readable English.</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 3 -->
-                                <div class="carousel-item">
-                                    <div class="carousel-content">
-                                        <div class="client-img"><img src="{{ asset('img/team/team3.png') }}"
-                                                alt="Testimonial Slider"></div>
-                                        <h3>Rajnish Kumar <br><span>India</span></h3>
-                                        <p class="col-md-8 offset-md-2">It is a long established fact that a reader will be
-                                            distracted by the readable content of a page when looking at its layout. The
-                                            point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                                            letters, as opposed to using ‘Content here, content here’, making it look like
-                                            readable English.</p>
-                                    </div>
-                                </div>
-                                <!-- Slider pre and next arrow -->
-                                <a class="carousel-control-prev text-white" href="#testimonialCarousel" role="button"
-                                    data-slide="prev">
-                                    <i class="fas fa-chevron-left" style="color: #000;"></i>
-                                </a>
-                                <a class="carousel-control-next text-white" href="#testimonialCarousel" role="button"
-                                    data-slide="next">
-                                    <i class="fas fa-chevron-right" style="color: #000;"></i>
-                                </a>
-                            </div>
+                            @else
+                                <p>Testimonial(s) Not Found</p>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        {{-- <section class="slideshow ">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    @foreach ($testimonial as $key => $testimonials)
+                        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $key }}"
+                            class="@if ($key == 0) active @endif">
+                        </li>
+                    @endforeach
+                </ol>
+                <div class="carousel-inner">
+                    @foreach ($testimonial as $key => $banner)
+                        <div class="carousel-item @if ($key == 0) active @endif">
+
+                                <div class=" container">
+                                    <div class="row">
+
+                                        <div class="col-lg-8  col-md-8 "> </div>
+                                        <div class="col-lg-4  col-md-4 slidecaptionwrapper  ">
+                                            <div class="slidecaption">
+                                                <h2>{{ $banner->name }}</h2>
+                                                <h3>{{ $banner->company }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <img src="{{ url('/uploads/testimonial/' . $testimonials->image) }}"
+                                alt="Testimonial Slider">
+                        </div>
+                    @endforeach
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </section> --}}
         <!-- End Testimonial Slider Section -->
 
 
