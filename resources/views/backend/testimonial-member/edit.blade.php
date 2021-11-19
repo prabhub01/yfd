@@ -55,13 +55,13 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Testimonial | Edit</h1>
-            <a href="{{ route('admin.testimonial.index') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <h1 class="h3 mb-0 text-gray-800">Member's Testimonial | Edit</h1>
+            <a href="{{ route('admin.member-testimonial.index') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                 Back</a>
         </div>
 
         <div class="row" style="background-color: #fff; padding: 20px; border-radius:20px;">
-            <form method="post" action="{{ route('admin.testimonial.update', $details->id) }}" accept-charset="UTF-8"
+            <form method="post" action="{{ route('admin.member-testimonial.update', $details->id) }}" accept-charset="UTF-8"
                 class="form-horizontal" enctype="multipart/form-data" style="width: 100%;">
                 @csrf
                 <div class="row">
@@ -85,14 +85,17 @@
                                                 type="text" value="{{ $details->name }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label">Company <span
-                                                    class="text-danger">*</span></label>
+                                            <label class="control-label">Company </label>
                                             <input class="form-control" name="company"
                                                 type="text" value="{{ $details->company }}">
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label">Location <span
-                                                    class="text-danger">*</span></label>
+                                            <label class="control-label">Post </label>
+                                            <input class="form-control" name="post"
+                                                type="text" value="{{ $details->post }}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Location </label>
                                                     <input class="form-control" name="location"
                                                     type="text" value="{{ $details->location }}">
                                         </div>
@@ -121,11 +124,11 @@
                                                 accept="image/png, image/jpeg"> </div>
                                     </div>
 
-                                    @if (file_exists('uploads/testimonial/' . $details->image) && !empty($details->image))
-                                        <div class="imageContainer"> <img src="/uploads/testimonial/{{ $details->image }}"
+                                    @if (file_exists('uploads/member-testimonial/' . $details->image) && !empty($details->image))
+                                        <div class="imageContainer"> <img src="/uploads/member-testimonial/{{ $details->image }}"
                                                 alt="No Image Found" srcset="" width="100%" height="100%">
                                             {{-- <div class="overlay"> <a
-                                                    href="{{ route('admin.testimonial.destroyImage', $details->id) }}"
+                                                    href="{{ route('admin.member-testimonial.destroyImage', $details->id) }}"
                                                     class="icon" title="User Profile"> <i class="fas fa-trash-alt"
                                                         title="Delete"></i> </a>
                                             </div> --}}

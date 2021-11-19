@@ -141,6 +141,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/testimonial/destroy/{id}', [App\Http\Controllers\Admin\TestimonialController::class, 'destroy'])->name('admin.testimonial.destroy');
     Route::get('/testimonial/destroyImage/{id}', [App\Http\Controllers\Admin\TestimonialController::class, 'destroyImage'])->name('admin.testimonial.destroyImage');
 
+    Route::get('/member-testimonial', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'index'])->name('admin.member-testimonial.index');
+    Route::get('/member-testimonial/create', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'create'])->name('admin.member-testimonial.create');
+    Route::post('/member-testimonial/store', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'store'])->name('admin.member-testimonial.store');
+    Route::get('/member-testimonial/edit/{id}', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'edit'])->name('admin.member-testimonial.edit');
+    Route::post('/member-testimonial/update/{id}', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'update'])->name('admin.member-testimonial.update');
+    Route::get('/member-testimonial/destroy/{id}', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'destroy'])->name('admin.member-testimonial.destroy');
+    Route::get('/member-testimonial/destroyImage/{id}', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'destroyImage'])->name('admin.member-testimonial.destroyImage');
+
 });
 
 

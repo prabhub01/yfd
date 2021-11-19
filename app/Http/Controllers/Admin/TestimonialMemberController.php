@@ -8,27 +8,26 @@ use App\Models\Testimonial;
 use App\Repositories\TeamRepository;
 use Illuminate\Http\Request;
 use Alert;
+use App\Models\TestimonialMember;
 
-class TestimonialController extends Controller
+class TestimonialMemberController extends Controller
 {
     public function index()
     {
-        $data = Testimonial::orderBy('display_order', 'asc')
+        $data = TestimonialMember::orderBy('display_order', 'asc')
             ->get();
-        return view('backend.testimonial.index', compact('data'));
+        return view('backend.testimonial-member.index', compact('data'));
     }
 
     public function create()
     {
-        return view('backend.testimonial.create');
+        return view('backend.testimonial-member.create');
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
-            'location' => 'required',
-            'company' => 'required',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -37,32 +36,30 @@ class TestimonialController extends Controller
         $input['is_active'] = isset($input['is_active']) ? 1 : 0;
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'uploads/testimonial/';
+            $destinationPath = 'uploads/member-testimonial/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
         }
 
-        Testimonial::create($input);
+        TestimonialMember::create($input);
 
         Alert::success('Success', 'Testimonial Created Successfully !');
-        return redirect()->route('admin.testimonial.index');
+        return redirect()->route('admin.member-testimonial.index');
     }
 
     public function edit($id)
     {
-        $details = Testimonial::findOrFail($id);
-        return view('backend.testimonial.edit', ['details' => $details]);
+        $details = TestimonialMember::findOrFail($id);
+        return view('backend.testimonial-member.edit', ['details' => $details]);
     }
 
     public function update(Request $request, $id)
     {
-        $details = Testimonial::findOrFail($id);
+        $details = TestimonialMember::findOrFail($id);
 
         $request->validate([
             'name' => 'required',
-            'location' => 'required',
-            'company' => 'required',
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -71,8 +68,10 @@ class TestimonialController extends Controller
         $input['is_active'] = isset($input['is_active']) ? 1 : 0;
 
         if ($image = $request->file('image')) {
-            unlink("uploads/testimonial/" . $details->image);
-            $destinationPath = 'uploads/testimonial/';
+            if (isset($details->image)) {
+                unlink("uploads/member-testimonial/" . $details->image);
+            }
+            $destinationPath = 'uploads/member-testimonial/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
@@ -82,25 +81,25 @@ class TestimonialController extends Controller
 
         $details->update($input);
         Alert::success('Success', 'Testimonial Updated Successfully !');
-        return redirect()->route('admin.testimonial.index');
+        return redirect()->route('admin.member-testimonial.index');
     }
 
     public function destroy($id)
     {
-        $details = Testimonial::findOrFail($id);
-        unlink("uploads/testimonial/" . $details->image);
+        $details = TestimonialMember::findOrFail($id);
+        unlink("uploads/member-testimonial/" . $details->image);
         $details->delete();
 
         Alert::success('Success', 'Testimonial Deleted Successfully !');
-        return redirect()->route('admin.testimonial.index');
+        return redirect()->route('admin.member-testimonial.index');
     }
 
     public function destroyImage($id)
     {
-        $details = Testimonial::findOrFail($id);
-        unlink("uploads/testimonial/" . $details->image);
+        $details = TestimonialMember::findOrFail($id);
+        unlink("uploads/member-testimonial/" . $details->image);
 
         Alert::success('Success', 'Testimonial Image Deleted Successfully !');
-        return redirect()->route('admin.testimonial.index');
+        return redirect()->route('admin.member-testimonial.index');
     }
 }
