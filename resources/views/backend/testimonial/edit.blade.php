@@ -122,7 +122,7 @@
                                     </div>
 
                                     @if (file_exists('uploads/testimonial/' . $details->image) && !empty($details->image))
-                                        <div class="imageContainer"> <img src="/uploads/testimonial/{{ $details->image }}"
+                                        <div class="imageContainer"> <img src="{{ url('/uploads/testimonial/' . $testimonials->image) }}"
                                                 alt="No Image Found" srcset="" width="100%" height="100%">
                                             {{-- <div class="overlay"> <a
                                                     href="{{ route('admin.testimonial.destroyImage', $details->id) }}"
