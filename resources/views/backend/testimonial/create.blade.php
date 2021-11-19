@@ -68,8 +68,8 @@
                                         <input type="file" class="custom-file-input" name="photo" id="image-file">
                                         <label class="custom-file-label selected" for="image-file"></label>
                                     </div> --}}
-                                    <div class="form-group"> <label class="control-label">Photo *</label> <span
-                                            class="text-muted float-right small">Preferred size: w:720px, h:900px</span>
+                                    <div class="form-group"> <label class="control-label">Photo *</label>
+                                        {{-- <span class="text-muted float-right small">Preferred size: w:720px, h:900px</span> --}}
                                         <div class="custom-file"> <input type="file" name="image"
                                                 accept="image/png, image/jpeg"> </div>
                                     </div>

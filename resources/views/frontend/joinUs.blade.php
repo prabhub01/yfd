@@ -365,64 +365,33 @@ h2::after {
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: rgb(241, 239, 239);">
                 <!-- Carousel indicators -->
-                {{-- <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol> --}}
+
                 <!-- Wrapper for carousel items -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="img-box"><img src="{{ asset('img/team/team1.png') }}" alt=""></div>
-                        <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
-                            Etiam
-                            faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus
-                            risus,
-                            volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
-                        <p class="overview"><b>Michael Holz</b> <span class="p"> Seo Analyst at <a
-                                    href="#">OsCorp
-                                    Tech.</a></span> </p>
+                @if (isset($testimonial) && !$testimonial->isEmpty())
+                    <div class="carousel-inner">
+                        @foreach ($testimonial as $key => $testimonials)
+                            <div class="carousel-item @if ($key == 0) active @endif">
+                                <div class="img-box"><img
+                                        src="{{ url('/uploads/member-testimonial/' . $testimonials->image) }}"
+                                        alt="Testimonial Slider"></div>
+                                <p class="testimonial">{{ $testimonials->description }}
+                                </p>
+                                <p class="overview"><b>{{ $testimonials->name }}</b> <span class="p"> {{ $testimonials->post }} at
+                                      <strong> {{ $testimonials->company }} </strong> </span> </p>
+                            </div>
+                        @endforeach
+
                     </div>
-                    <div class="carousel-item">
-                        <div class="img-box"><img src="{{ asset('img/team/team2.png') }}" alt=""></div>
-                        <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem
-                            tempor,
-                            varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.
-                            Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.
-                        </p>
-                        <p class="overview"><b>Paula Wilson</b><span class="p"> Seo Analyst at <a
-                                    href="#">OsCorp
-                                    Tech.</a></span> </p>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="img-box"><img src="{{ asset('img/team/team3.png') }}" alt=""></div>
-                        <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a
-                            mi
-                            suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis.
-                            Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor
-                            velit.
-                        </p>
-                        <p class="overview"><b>Antonio Moreno</b><span class="p"> Seo Analyst at <a
-                                    href="#">OsCorp
-                                    Tech.</a></span> </p>
-                        {{-- <div class="star-rating">
-				<ul class="list-inline">
-					<li class="list-inline-item"><i class="fa fa-star"></i></li>
-					<li class="list-inline-item"><i class="fa fa-star"></i></li>
-					<li class="list-inline-item"><i class="fa fa-star"></i></li>
-					<li class="list-inline-item"><i class="fa fa-star"></i></li>
-					<li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
-				</ul>
-			</div> --}}
-                    </div>
-                </div>
-                <!-- Carousel controls -->
-                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                    <i class="fa fa-angle-left" style="color: #000;"></i>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                    <i class="fa fa-angle-right" style="color: #000;"></i>
-                </a>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <i class="fa fa-angle-left" style="color: #000;"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <i class="fa fa-angle-right" style="color: #000;"></i>
+                    </a>
+                @else
+                    <p>Testimonial(s) Not Found</p>
+                @endif
             </div>
         </div>
         </div>

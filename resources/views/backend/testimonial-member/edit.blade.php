@@ -118,8 +118,9 @@
                         <div class="card card-custom gutter-b">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <div class="form-group"> <label class="control-label">Photo </label> <span
-                                            class="text-muted float-right small">Preferred size: 140x160px</span>
+                                    <div class="form-group"> <label class="control-label">Photo </label>
+                                        {{-- <span
+                                            class="text-muted float-right small">Preferred size: 140x160px</span> --}}
                                         <div class="custom-file"> <input type="file" name="image"
                                                 accept="image/png, image/jpeg"> </div>
                                     </div>
