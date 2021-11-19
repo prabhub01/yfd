@@ -96,10 +96,10 @@ class TestimonialController extends Controller
 
     public function destroyImage($id)
     {
-        $details = Team::findOrFail($id);
-        unlink("uploads/team/" . $details->photo);
+        $details = Testimonial::findOrFail($id);
+        unlink("uploads/testimonial/" . $details->image);
 
-        return redirect()->route('admin.team.index')
-            ->with('flash_success', 'Image Deleted Successfully');
+        Alert::success('Success', 'Testimonial Image Deleted Successfully !');
+        return redirect()->route('admin.testimonial.index');
     }
 }
