@@ -19,7 +19,7 @@ class CreateTestimonialsTable extends Migration
             $table->longText('name')->nullable();
             $table->string('company')->nullable();
             $table->string('location')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('display_order')->nullable()->default(0);
             $table->boolean('is_active')->default(1);
             $table->timestamps();

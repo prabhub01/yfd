@@ -30,6 +30,24 @@ $secondParam = Request::segment(2);
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fab fa-wpforms"></i>
+            <span>Content</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="padding: 5px 0px 5px 20px;">
+            <div class="bg-white py-2 collapse-inner rounded">
+                {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+                <a class="collapse-item" href="{{ route('admin.event.index') }}">Events</a>
+                <a class="collapse-item" href="{{ route('admin.blog.index') }}">Blogs</a>
+                <a class="collapse-item" href="{{ route('admin.podcast.index') }}">Podcast</a>
+
+            </div>
+        </div>
+    </li>
+
     <li class="nav-item {{ $secondParam == 'team' ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.team.index') }}" style="padding: 5px 0px 5px 20px;">
             <i class="fas fa-users"></i>
@@ -42,17 +60,6 @@ $secondParam = Request::segment(2);
             <span>About Us</span></a>
     </li>
 
-    <li class="nav-item {{ $secondParam == 'events' ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('admin.event.index') }}" style="padding: 5px 0px 5px 20px;">
-            <i class="fab fa-elementor"></i>
-            <span>Events</span></a>
-    </li>
-
-    <li class="nav-item {{ $secondParam == 'blog' ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('admin.blog.index') }}" style="padding: 5px 0px 5px 20px;">
-            <i class="fab fa-elementor"></i>
-            <span>Blogs</span></a>
-    </li>
        <!-- Divider -->
    <hr class="sidebar-divider">
    <!-- Heading -->

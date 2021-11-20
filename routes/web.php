@@ -149,6 +149,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/member-testimonial/destroy/{id}', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'destroy'])->name('admin.member-testimonial.destroy');
     Route::get('/member-testimonial/destroyImage/{id}', [App\Http\Controllers\Admin\TestimonialMemberController::class, 'destroyImage'])->name('admin.member-testimonial.destroyImage');
 
+    Route::get('/podcast', [App\Http\Controllers\Admin\PodcastController::class, 'index'])->name('admin.podcast.index');
+    Route::get('/podcast/create', [App\Http\Controllers\Admin\PodcastController::class, 'create'])->name('admin.podcast.create');
+    Route::post('/podcast/store', [App\Http\Controllers\Admin\PodcastController::class, 'store'])->name('admin.podcast.store');
+    Route::get('/podcast/edit/{id}', [App\Http\Controllers\Admin\PodcastController::class, 'edit'])->name('admin.podcast.edit');
+    Route::post('/podcast/update/{id}', [App\Http\Controllers\Admin\PodcastController::class, 'update'])->name('admin.podcast.update');
+    Route::get('/podcast/destroy/{id}', [App\Http\Controllers\Admin\PodcastController::class, 'destroy'])->name('admin.podcast.destroy');
 });
 
 

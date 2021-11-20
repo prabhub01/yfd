@@ -16,31 +16,16 @@
         </div>
         <section>
             <div class="container">
-                <div class="row"
-                    style="margin-bottom: 20px; background-color: #f2fdff; padding: 5px; border-radius: 10px;">
-                        <iframe
-                            src="https://anchor.fm/youthfederal-discourse/embed/episodes/Citizenship-in-Nepal-eft8hf/a-a2i5nam"
-                            height="auto" width="100%" frameborder="" scrolling="no">
-                        </iframe>
-                </div>
-
-                <div class="row"
-                    style="margin-bottom: 20px; background-color: #f2fdff; padding: 5px; border-radius: 10px;">
-
-                        <iframe src="https://anchor.fm/youthfederal-discourse/embed/episodes/--ej3ujs/a-a34c5io" height="auto"
-                            width="100%" frameborder="" scrolling="no">
-                        </iframe>
-
-                </div>
-
-                <div class="row"
-                    style="margin-bottom: 20px; background-color: #f2fdff; padding: 5px; border-radius: 10px;">
-
-                        <iframe src="https://anchor.fm/youthfederal-discourse/embed/episodes/ep-ei4he1/a-a2umo9k" height="auto"
-                            width="100%" frameborder="" scrolling="no">
-                        </iframe>
-
-                </div>
+                @if (isset($data) && !$data->isEmpty())
+                    @foreach ($data as $podcast)
+                        <div class="row"
+                            style="margin-bottom: 20px; background-color: #f2fdff; padding: 5px; border-radius: 10px;">
+                            <iframe src="{{ $podcast->podcast_link }}" height="auto" width="100%" frameborder=""
+                                scrolling="no">
+                            </iframe>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </section>
-    @endsection
+@endsection
