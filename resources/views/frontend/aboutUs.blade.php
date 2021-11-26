@@ -2,7 +2,10 @@
 @section('content')
     <section class="bg-banner">
         @if (file_exists('uploads/about-us/banner/' . $data->banner) && !empty($data->banner))
-            <img src="{{ asset('uploads/about-us/banner/' . $data->banner) }}" alt="Not found" srcset="" width="100%" height="250px">
+            <img src="{{ asset('uploads/about-us/banner/' . $data->banner) }}" alt="Not found" srcset="" width="100%"
+                height="250px">
+        @else
+            <img src="{{ url('/storage/banner/hill.jpg') }}" alt="Image Not Found" height="250px" width="100%">
         @endif
     </section>
     <section>
@@ -46,8 +49,8 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="_Ol_er_qw yu">
                         @if (file_exists('uploads/about-us/our-story/' . $data->our_story_img) && !empty($data->our_story_img))
-                            <img src="{{ asset('uploads/about-us/our-story/' . $data->our_story_img) }}" alt="Our Story Image Not found" srcset="" width="100%"
-                                height="250px">
+                            <img src="{{ asset('uploads/about-us/our-story/' . $data->our_story_img) }}"
+                                alt="Our Story Image Not found" srcset="" width="100%" height="250px">
                         @endif
                     </div>
                 </div>
@@ -59,8 +62,8 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="_Ol_er_qw yu">
                         @if (file_exists('uploads/about-us/our-mission/' . $data->our_mission_img) && !empty($data->our_mission_img))
-                            <img src="{{ asset('uploads/about-us/our-mission/' . $data->our_mission_img) }}" alt="Our Mission Image Not found" srcset="" width="100%"
-                                height="250px">
+                            <img src="{{ asset('uploads/about-us/our-mission/' . $data->our_mission_img) }}"
+                                alt="Our Mission Image Not found" srcset="" width="100%" height="250px">
                         @endif
                     </div>
                 </div>
@@ -93,8 +96,8 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="_Ol_er_qw yu">
                         @if (file_exists('uploads/about-us/our-vision/' . $data->our_vision_img) && !empty($data->our_vision_img))
-                            <img src="{{ asset('uploads/about-us/our-vision/' . $data->our_vision_img) }}" alt="Our Vision Image Not found" srcset="" width="100%"
-                                height="250px">
+                            <img src="{{ asset('uploads/about-us/our-vision/' . $data->our_vision_img) }}"
+                                alt="Our Vision Image Not found" srcset="" width="100%" height="250px">
                         @endif
                     </div>
                 </div>
@@ -106,8 +109,8 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="_Ol_er_qw yu">
                         @if (file_exists('uploads/about-us/our-objectives/' . $data->our_objectives_img) && !empty($data->our_objectives_img))
-                            <img src="{{ asset('uploads/about-us/our-objectives/' . $data->our_objectives_img) }}" alt="Our Objectives Image Not found" srcset="" width="100%"
-                                height="330px">
+                            <img src="{{ asset('uploads/about-us/our-objectives/' . $data->our_objectives_img) }}"
+                                alt="Our Objectives Image Not found" srcset="" width="100%" height="330px">
                         @endif
                     </div>
                 </div>

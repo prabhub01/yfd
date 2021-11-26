@@ -1,7 +1,7 @@
 @extends('layout.frontend')
 @section('content')
     <section class="bg-banner">
-        <img src="{{ asset('storage/banner/' . 'hill1.jpg') }}" alt="" height="250px" width="100%">
+        <img src="{{ url('/storage/banner/hill.jpg') }}" alt="Image Not Found" height="250px" width="100%">
     </section>
 
     <section class="se-001">
