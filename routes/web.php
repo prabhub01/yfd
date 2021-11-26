@@ -86,13 +86,15 @@ Route::post('/quick-enquiry', [App\Http\Controllers\EmailSubsController::class, 
 
 
 // admin routes
-Route::get('/admin/dashboard', function () {
-    return view('backend.dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/admin/dashboard', function () {
+//     return view('backend.dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::post('/images/upload', [App\Http\Controllers\Admin\CkeditorController::class, 'upload'])->name('ckeditor.image-upload');
-
 
     Route::get('/team', [App\Http\Controllers\Admin\TeamController::class, 'index'])->name('admin.team.index');
     Route::get('/team/create', [App\Http\Controllers\Admin\TeamController::class, 'create'])->name('admin.team.create');
