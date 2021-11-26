@@ -110,7 +110,6 @@ class BlogController extends Controller
             'description' => 'required',
             'title' => 'required',
             'date' => 'required',
-            'location' => 'required',
             'writer' => 'required',
 
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',

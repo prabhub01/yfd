@@ -1,8 +1,13 @@
 @extends('layout.frontend')
 @section('content')
-    <section class="bg-banner">
-        <img src="{{ asset('storage/banner/' . 'hill1.jpg') }}" alt="" height="250px" width="100%">
-    </section>
+<section class="bg-banner">
+    {{-- @if (file_exists('uploads/blog/banner/' . $data->banner) && !empty($data->banner))
+        <img src="{{ asset('uploads/blog/banner/' . $data->banner) }}" alt="Not found" srcset="" width="100%"
+            height="250px">
+    @else --}}
+        <img src="{{ url('/storage/banner/hill.jpg') }}" alt="Image Not Found" height="250px" width="100%">
+    {{-- @endif --}}
+</section>
     <section>
         <div class="container">
             <div class="row">
