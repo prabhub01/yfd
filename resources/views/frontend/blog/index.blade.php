@@ -31,7 +31,7 @@
                                         <div class="ribbon" style="color: darkslategrey;">Past</div>
                                     </div> --}}
                                     @if (file_exists('uploads/blogs/image/' . $blog->image) && !empty($blog->image))
-                                        <img src="/uploads/blogs/image/{{ $blog->image }}" alt="Image Not found"
+                                        <img src="{{ asset('uploads/blogs/image/' . $blog->image) }}" alt="Image Not found"
                                             srcset="" width="100%" height="100%">
                                     @endif
                                     <div class="card-body">
