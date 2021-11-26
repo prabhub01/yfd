@@ -30,7 +30,7 @@
                                 <td>{{ $event->date }}</td>
                                 <td style="width: 30%;">
                                     @if (file_exists('uploads/blogs/image/' . $event->image) && !empty($event->image))
-                                        <img src="/uploads/blogs/image/{{ $event->image }}" alt="Image Not found"
+                                        <img src="{{ asset('uploads/blogs/image/' . $event->image) }}" alt="Image Not found"
                                             srcset="" width="30%" height="30%">
                                     @endif
                                 </td>

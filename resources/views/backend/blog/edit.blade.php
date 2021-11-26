@@ -139,7 +139,7 @@
                                                 accept="image/png, image/jpeg"> </div>
                                         @if (file_exists('uploads/blogs/image/' . $details->image) && !empty($details->image))
                                             <div class="imageContainer"> <img
-                                                    src=" {{ asset('uploads/blogs/banner/' . $details->image) }}"
+                                                    src=" {{ asset('uploads/blogs/image/' . $details->image) }}"
                                                     alt="No Image Found" srcset="" width="100%" height="100%">
                                                 <div class="overlay"> <a
                                                         href="{{ route('admin.blog.destroyImage', $details->id) }}"
