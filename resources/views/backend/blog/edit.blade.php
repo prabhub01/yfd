@@ -119,7 +119,7 @@
 
                                         @if (file_exists('uploads/blogs/banner/' . $details->banner) && !empty($details->banner))
                                             <div class="imageContainer"> <img
-                                                    src="/uploads/blogs/banner/{{ $details->banner }}"
+                                                    src=" {{ asset('uploads/blogs/banner/' . $details->banner) }}"
                                                     alt="No Banner Image Found" srcset="" width="100%" height="100%">
                                                 <div class="overlay"> <a
                                                         href="{{ route('admin.blog.destroyBanner', $details->id) }}"
@@ -139,8 +139,8 @@
                                                 accept="image/png, image/jpeg"> </div>
                                         @if (file_exists('uploads/blogs/image/' . $details->image) && !empty($details->image))
                                             <div class="imageContainer"> <img
-                                                    src="/uploads/blogs/image/{{ $details->image }}"
-                                                    alt="No Banner Image Found" srcset="" width="100%" height="100%">
+                                                    src=" {{ asset('uploads/blogs/banner/' . $details->image) }}"
+                                                    alt="No Image Found" srcset="" width="100%" height="100%">
                                                 <div class="overlay"> <a
                                                         href="{{ route('admin.blog.destroyImage', $details->id) }}"
                                                         class="icon" title="Delete this Image"> <i
