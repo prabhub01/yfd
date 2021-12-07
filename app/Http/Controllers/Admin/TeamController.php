@@ -39,7 +39,7 @@ class TeamController extends Controller
         $request->validate([
             'full_name' => 'required',
             'designation' => 'required',
-            'description' => 'required',
+            // 'description' => 'required',
             'email' => 'required',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);

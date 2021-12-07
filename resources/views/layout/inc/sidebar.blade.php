@@ -32,12 +32,13 @@ $secondParam = Request::segment(2);
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
             <i class="fab fa-wpforms"></i>
             <span>Content</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="padding: 5px 0px 5px 20px;">
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"
+            style="padding: 5px 0px 5px 20px;">
             <div class="bg-white py-2 collapse-inner rounded">
                 {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
                 <a class="collapse-item" href="{{ route('admin.event.index') }}">Events</a>
@@ -60,26 +61,27 @@ $secondParam = Request::segment(2);
             <span>About Us</span></a>
     </li>
 
-       <!-- Divider -->
-   <hr class="sidebar-divider">
-   <!-- Heading -->
-   <div class="sidebar-heading">
-       Testimonial
-   </div>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Testimonial
+    </div>
 
-   <li class="nav-item {{ $secondParam == 'member-testimonial' ? 'active' : '' }}">
-       <a class="nav-link" href="{{ route('admin.member-testimonial.index') }}" style="padding: 5px 0px 5px 20px;">
-           <i class="fab fa-wpforms"></i>
-           <span>Member Testimonial </span></a>
-   </li>
+    <li class="nav-item {{ $secondParam == 'member-testimonial' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.member-testimonial.index') }}"
+            style="padding: 5px 0px 5px 20px;">
+            <i class="fab fa-wpforms"></i>
+            <span>Member Testimonial </span></a>
+    </li>
 
-   <li class="nav-item {{ $secondParam == 'testimonial' ? 'active' : '' }}">
-       <a class="nav-link" href="{{ route('admin.testimonial.index') }}" style="padding: 5px 0px 5px 20px;">
-           <i class="fab fa-wpforms"></i>
-           <span>Testimonial </span></a>
-   </li>
-   <!-- Divider -->
-   <hr class="sidebar-divider">
+    <li class="nav-item {{ $secondParam == 'testimonial' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.testimonial.index') }}" style="padding: 5px 0px 5px 20px;">
+            <i class="fab fa-wpforms"></i>
+            <span>Testimonial </span></a>
+    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
     <!-- Heading -->
     <div class="sidebar-heading">
         Form Submission
@@ -95,6 +97,14 @@ $secondParam = Request::segment(2);
         <a class="nav-link" href="{{ route('admin.contact-us.index') }}" style="padding: 5px 0px 5px 20px;">
             <i class="fab fa-wpforms"></i>
             <span>Contact Form </span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    <li class="nav-item {{ $secondParam == 'settings' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.settings.index') }}" style="padding: 5px 0px 5px 20px;">
+            <i class="fab fa-wpforms"></i>
+            <span>Settings</span></a>
     </li>
 
     <!-- Sidebar Toggler (Sidebar) -->
