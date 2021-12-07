@@ -43,8 +43,10 @@ Route::get('/volunteer', [App\Http\Controllers\VolunteerController::class, 'inde
 Route::post('/volunteer-submit', [App\Http\Controllers\VolunteerController::class, 'store'])->name('volunteer.store');
 
 
-//Our Team
+//Our Team and Founder
 Route::get('/our-team', [App\Http\Controllers\TeamController::class, 'index'])->name('our-team');
+Route::get('/our-founder', [App\Http\Controllers\TeamController::class, 'founder'])->name('our-founder');
+
 
 //Speak With Us
 Route::get('/speak-with-us', [App\Http\Controllers\SpeakWithUsController::class, 'index'])->name('speak-with-us');
@@ -104,6 +106,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/team/destroy/{id}', [App\Http\Controllers\Admin\TeamController::class, 'destroy'])->name('admin.team.destroy');
     Route::get('/team/destroyImage/{id}', [App\Http\Controllers\Admin\TeamController::class, 'destroyImage'])->name('admin.team.destroyImage');
 
+    Route::get('/founder', [App\Http\Controllers\Admin\FounderController::class, 'index'])->name('admin.founder.index');
+    Route::get('/founder/create', [App\Http\Controllers\Admin\FounderController::class, 'create'])->name('admin.founder.create');
+    Route::post('/founder/store', [App\Http\Controllers\Admin\FounderController::class, 'store'])->name('admin.founder.store');
+    Route::get('/founder/edit/{id}', [App\Http\Controllers\Admin\FounderController::class, 'edit'])->name('admin.founder.edit');
+    Route::post('/founder/update/{id}', [App\Http\Controllers\Admin\FounderController::class, 'update'])->name('admin.founder.update');
+    Route::get('/founder/destroy/{id}', [App\Http\Controllers\Admin\FounderController::class, 'destroy'])->name('admin.founder.destroy');
+    Route::get('/founder/destroyImage/{id}', [App\Http\Controllers\Admin\FounderController::class, 'destroyImage'])->name('admin.founder.destroyImage');
+
     Route::get('/about-us', [App\Http\Controllers\Admin\AboutUsController::class, 'index'])->name('admin.about-us.index');
     Route::post('/about-us/store', [App\Http\Controllers\Admin\AboutUsController::class, 'store'])->name('admin.about-us.store');
     Route::post('/about-us/update', [App\Http\Controllers\Admin\AboutUsController::class, 'update'])->name('admin.about-us.update');
@@ -162,6 +172,3 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');
 
 });
-
-
-

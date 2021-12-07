@@ -49,10 +49,26 @@ $secondParam = Request::segment(2);
         </div>
     </li>
 
-    <li class="nav-item {{ $secondParam == 'team' ? 'active' : '' }}">
+    {{-- <li class="nav-item {{ $secondParam == 'team' ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.team.index') }}" style="padding: 5px 0px 5px 20px;">
             <i class="fas fa-users"></i>
             <span>Team Management</span></a>
+    </li> --}}
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+            aria-controls="collapseOne">
+            <i class="fab fa-wpforms"></i>
+            <span>Team Management</span>
+        </a>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"
+            style="padding: 5px 0px 5px 20px;">
+            <div class="bg-white py-2 collapse-inner rounded">
+                {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+                <a class="collapse-item" href="{{ route('admin.team.index') }}">Teams</a>
+                <a class="collapse-item" href="{{ route('admin.founder.index') }}">Founders</a>
+            </div>
+        </div>
     </li>
 
     <li class="nav-item {{ $secondParam == 'about-us' ? 'active' : '' }}">
