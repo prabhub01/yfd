@@ -8,7 +8,8 @@
     <title>YFD || Youth in Federal Discourse</title>
 
 
-    {{-- <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}"> --}}
+    {{--
+    <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}">
@@ -28,7 +29,6 @@
         .white {
             background-color: #fff;
         }
-
     </style>
 </head>
 
@@ -71,7 +71,8 @@
                                             Support
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('partner-with-us') }}" style="color: black;">Partner With Us</a>
+                                            <a class="dropdown-item" href="{{ route('partner-with-us') }}"
+                                                style="color: black;">Partner With Us</a>
                                             <a class="dropdown-item" href="{{ route('join-us') }}"
                                                 style="color: black;">Become a member</a>
                                             <a class="dropdown-item" href="{{ route('volunteer') }}"
@@ -84,15 +85,18 @@
                                                 style="color: black;">Speak with us</a>
                                         </div>
                                     </li>
-                                  <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Events
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('event') }}" style="color: black;"> Latest Events</a>
-                                            <a class="dropdown-item" href="{{ route('past-event') }}" style="color: black;">Past Events</a>
-                                            <a class="dropdown-item" href="{{ route('next-event') }}" style="color: black;">Upcoming Events</a>
+                                            <a class="dropdown-item" href="{{ route('event') }}" style="color: black;">
+                                                Latest Events</a>
+                                            <a class="dropdown-item" href="{{ route('past-event') }}"
+                                                style="color: black;">Past Events</a>
+                                            <a class="dropdown-item" href="{{ route('next-event') }}"
+                                                style="color: black;">Upcoming Events</a>
                                         </div>
                                     </li>
                                     <li><a href="{{ route('event') }}">Events</a></li>
@@ -128,8 +132,8 @@
         <div class="container">
             <a href="#" class="navbar-brand">
                 <!-- Logo Image -->
-                {{-- <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt=""
-                    class="d-inline-block align-middle mr-2"> --}}
+                {{-- <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45"
+                    alt="" class="d-inline-block align-middle mr-2"> --}}
                 <a href="{{ route('index') }}"> <img src="{{ asset('img/yfdLogo.png') }}"> </a>
                 <!-- Logo Text -->
             </a>
@@ -151,15 +155,14 @@
                                 Us</a>
                             <a class="dropdown-item" href="{{ route('our-team') }}" style="color: black;">Our
                                 Team</a>
-                              <a class="dropdown-item" href="{{ route('our-founder') }}" style="color: black;">Our
+                            <a class="dropdown-item" href="{{ route('our-founder') }}" style="color: black;">Our
                                 Founders</a>
                             <a class="dropdown-item" href="#" style="color: black;">Annual Reports</a>
                             <a class="dropdown-item" href="#" style="color: black;">Financial
                                 Reports</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="{{ route('thematic-areas') }}"
-                            class="nav-link">Thematic
+                    <li class="nav-item"><a href="{{ route('thematic-areas') }}" class="nav-link">Thematic
                             Areas</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -167,12 +170,11 @@
                             Support
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('partner-with-us') }}"
-                                style="color: black;">Partner With Us</a>
+                            <a class="dropdown-item" href="{{ route('partner-with-us') }}" style="color: black;">Partner
+                                With Us</a>
                             <a class="dropdown-item" href="{{ route('join-us') }}" style="color: black;">Become a
                                 member</a>
-                            <a class="dropdown-item" href="{{ route('volunteer') }}"
-                                style="color: black;">Volunteer</a>
+                            <a class="dropdown-item" href="{{ route('volunteer') }}" style="color: black;">Volunteer</a>
                             <a class="dropdown-item" href="{{ route('donate') }}" style="color: black;">Donate</a>
                             <a class="dropdown-item" href="{{ route('write-for-us') }}" style="color: black;">Write
                                 for us</a>
@@ -186,9 +188,12 @@
                             Events
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('event') }}" style="color: black;"> Latest Events</a>
-                            <a class="dropdown-item" href="{{ route('past-event') }}" style="color: black;">Past Events</a>
-                            <a class="dropdown-item" href="{{ route('next-event') }}" style="color: black;">Upcoming Events</a>
+                            <a class="dropdown-item" href="{{ route('event') }}" style="color: black;"> Latest
+                                Events</a>
+                            <a class="dropdown-item" href="{{ route('past-event') }}" style="color: black;">Past
+                                Events</a>
+                            <a class="dropdown-item" href="{{ route('next-event') }}" style="color: black;">Upcoming
+                                Events</a>
                         </div>
                     </li> --}}
                     <li class="nav-item"><a href="{{ route('event') }}" class="nav-link">Events</a></li>
@@ -199,8 +204,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('blog') }}" style="color: black;">Blogs</a>
-                            <a class="dropdown-item" href="{{ route('podcast') }}"
-                                style="color: black;">Podcasts</a>
+                            <a class="dropdown-item" href="{{ route('podcast') }}" style="color: black;">Podcasts</a>
                             <a class="dropdown-item" href="#" style="color: black;">Newspaper
                                 Articles</a>
                             {{-- <a class="dropdown-item" href="#" style="color: black;">Infographics</a> --}}
@@ -234,10 +238,10 @@
                             Republic of Nepal.</p>
                         <a href="#"> <button type="button" class="btn btn-info btn-sm">Read More</button> </a> <br> <br>
                         <p class="social-links">
-                            <a href="#"><i class="fab fa-facebook"></i> </a>
-                            <a href="#"> </a>
-                            <a href="#"><i class="fab fa-twitter-square"></i> </a>
-                            <a href="#"><i class="fab fa-youtube-square"></i> </a>
+                            <a href="https://www.facebook.com/youthinfederaldiscourse"><i class="fab fa-facebook"></i>
+                            </a>
+                            {{-- <a href="#"><i class="fab fa-twitter-square"></i> </a>
+                            <a href="#"><i class="fab fa-youtube-square"></i> </a> --}}
                         </p>
                     </div>
                 </div>
@@ -280,10 +284,10 @@
                         <h3>NewsLetter</h3>
                         <p></p>
                         @if (Session::has('flash_success'))
-                            <div class="alert alert-success alert-dismissible">
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                {!! Session::get('flash_success') !!}
-                            </div>
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            {!! Session::get('flash_success') !!}
+                        </div>
                         @endif
                         <form class="my-form" action="{{ route('quickEnquiry') }}" method="POST"
                             enctype="multipart/form-data">
@@ -301,26 +305,27 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                     <div class="_kl_de_w">
                         {{-- <h3>Services</h3>
-            <ol>
-              <li><i class="far fa-angle-right"></i>Raise fund for healthy food</li>
-              <li><i class="far fa-angle-right"></i>Education for poor children</li>
-              <li><i class="far fa-angle-right"></i>Promoting the rights of children</li>
-              <li><i class="far fa-angle-right"></i>Massive donation to poor</li>
-              <li class="last"><i class="far fa-angle-right"></i>Huge help to homeless pupil</li>
-            </ol> --}}
+                        <ol>
+                            <li><i class="far fa-angle-right"></i>Raise fund for healthy food</li>
+                            <li><i class="far fa-angle-right"></i>Education for poor children</li>
+                            <li><i class="far fa-angle-right"></i>Promoting the rights of children</li>
+                            <li><i class="far fa-angle-right"></i>Massive donation to poor</li>
+                            <li class="last"><i class="far fa-angle-right"></i>Huge help to homeless pupil</li>
+                        </ol> --}}
                         {{-- <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.990393692634!2d85.31438031506165!3d27.686691782800462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b4668fe645%3A0xe924ef110b00afcb!2sPeace%20Nepal%20DOT%20Com%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1622347595121!5m2!1sen!2snp"
                             width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --}}
                         {{-- <div class="col-lg-4 col-md-6 col-12"> --}}
-                        <div class="fb-page" data-href="https://www.facebook.com/youthinfederaldiscourse"
-                            data-tabs="timeline" data-width="1000" data-height="280" data-small-header="true"
-                            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                            <blockquote cite="https://www.facebook.com/youthinfederaldiscourse"
-                                class="fb-xfbml-parse-ignore"><a
-                                    href="https://www.facebook.com/youthinfederaldiscourse">Youth in Federal
-                                    Discourse</a></blockquote>
-                        </div>
-                        {{-- </div> --}}
+                            <div class="fb-page" data-href="https://www.facebook.com/youthinfederaldiscourse"
+                                data-tabs="timeline" data-width="1000" data-height="280" data-small-header="true"
+                                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/youthinfederaldiscourse"
+                                    class="fb-xfbml-parse-ignore"><a
+                                        href="https://www.facebook.com/youthinfederaldiscourse">Youth in Federal
+                                        Discourse</a></blockquote>
+                            </div>
+                            {{--
+                        </div> --}}
                     </div>
                 </div>
 
@@ -340,7 +345,7 @@
 </body>
 
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"
-nonce="lpswDjOc"></script>
+    nonce="lpswDjOc"></script>
 
 <script src="{{ asset('/frontend/js/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('/frontend/js/popper.min.js') }}"></script>
