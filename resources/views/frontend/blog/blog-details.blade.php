@@ -64,7 +64,9 @@
                     @foreach ($latest as $latestBlog)
                     <div class="mb-4 box-shadow">
                         <div class="card-body" style="padding: 10px 10px 10px 0px;">
-                            <p class="card-text" style="color: rgb(59, 59, 61);"> <strong> {{ $latestBlog->title }}
+                            <p class="card-text" style="color: rgb(59, 59, 61);"> <strong>
+                                    <a href="{{ route('blog-details', $latestBlog->slug) }}">{{ $latestBlog->title }}
+                                    </a>
                                 </strong>
                                 <br>
                             <div class="btn-group">
