@@ -29,6 +29,13 @@
         .white {
             background-color: #fff;
         }
+
+        .latest-blogs {
+            background-color: rgb(245, 238, 238);
+            padding-top: 30px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 

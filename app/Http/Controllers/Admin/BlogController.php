@@ -17,7 +17,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $data = Blog::get();
+        $data = Blog::orderBy('created_at', 'desc')->get();
         return view('backend.blog.index',compact('data'));
     }
 
@@ -44,6 +44,7 @@ class BlogController extends Controller
             'title' => 'required',
             'date' => 'required',
             'writer' => 'required',
+            'excerpt' => 'required',
 
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -111,6 +112,7 @@ class BlogController extends Controller
             'title' => 'required',
             'date' => 'required',
             'writer' => 'required',
+            'excerpt' => 'required',
 
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);

@@ -11,13 +11,15 @@ class blogController extends Controller
 {
     public function index()
     {
-        $data = Blog::where('is_active', 1)->get();
+        $data = Blog::where('is_active', 1)->orderBy('created_at', 'desc')->get();
         return view('frontend.blog.index', compact('data'));
     }
 
     public function view($slug)
     {
         $data = Blog::where('slug', $slug)->first();
-        return view('frontend.blog.blog-details',compact('data'));
+        $latest = Blog::orderBy('created_at', 'desc')->take(10)->get();
+        // dd($latest);
+        return view('frontend.blog.blog-details',compact('data','latest'));
     }
 }
