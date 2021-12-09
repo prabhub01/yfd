@@ -35,7 +35,7 @@
                                 <h4 class="card-text">{{ $blog->title }} </h4>
                             </a>
 
-                            <span style="text-align: justify;">{{ Str::limit($blog->excerpt, 300) }}</span>
+                            <p style="text-align: justify;">{{ Str::limit($blog->excerpt, 300) }}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <div style="float: left;">
