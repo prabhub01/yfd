@@ -247,8 +247,12 @@
                         <p class="social-links">
                             <a href="https://www.facebook.com/youthinfederaldiscourse"><i class="fab fa-facebook"></i>
                             </a>
-                            {{-- <a href="#"><i class="fab fa-twitter-square"></i> </a>
-                            <a href="#"><i class="fab fa-youtube-square"></i> </a> --}}
+                            <a
+                                href="https://twitter.com/YDiscourse?fbclid=IwAR1FvGb_H4vNkiVqPS5Hl8okIXYqiSvUAm1E_eu0ZhL941MHpc1JM6OWcIo"><i
+                                    class="fab fa-twitter-square"></i> </a>
+                            <a
+                                href="https://www.instagram.com/youthinfederaldiscourse/?fbclid=IwAR26caIEBVZ4eolsXw51hJstTyQ2qpktSy3n3anP-kPIaepfCu2puEjbv0Q"><i
+                                    class="fab fa-instagram-square"></i> </a>
                         </p>
                     </div>
                 </div>
