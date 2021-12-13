@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/yfd-logo.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/yfd-logo-only.png') }}">
     <title>YFD || Youth in Federal Discourse</title>
 
 
@@ -238,7 +238,9 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                     <div class="_kl_de_w">
                         <div class="logo">
-                            <img src="{{ asset('img/yfd.png') }}">
+                            {{-- <img src="{{ asset('img/yfd-logo-only.png') }}" height="20%" width="30%"> --}}
+                            <a href="{{ route('index') }}"> <img src="{{ asset('img/yfdLogo.png') }}"> </a>
+                            <hr>
                         </div>
                         <p style="text-align: justify;">Youth in Federal Discourse (YFD) is an organization designed to
                             give a platform to youths in understanding the new federal setup of the Federal Democratic
