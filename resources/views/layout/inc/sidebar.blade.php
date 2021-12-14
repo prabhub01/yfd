@@ -44,7 +44,6 @@ $secondParam = Request::segment(2);
                 <a class="collapse-item" href="{{ route('admin.event.index') }}">Events</a>
                 <a class="collapse-item" href="{{ route('admin.blog.index') }}">Blogs</a>
                 <a class="collapse-item" href="{{ route('admin.podcast.index') }}">Podcast</a>
-
             </div>
         </div>
     </li>
@@ -85,8 +84,7 @@ $secondParam = Request::segment(2);
     </div>
 
     <li class="nav-item {{ $secondParam == 'member-testimonial' ? 'active' : '' }}">
-        <a class="nav-link" href="{{ route('admin.member-testimonial.index') }}"
-            style="padding: 5px 0px 5px 20px;">
+        <a class="nav-link" href="{{ route('admin.member-testimonial.index') }}" style="padding: 5px 0px 5px 20px;">
             <i class="fab fa-wpforms"></i>
             <span>Member Testimonial </span></a>
     </li>

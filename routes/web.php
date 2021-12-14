@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-require __DIR__.'/auth.php';
+
+require __DIR__ . '/auth.php';
 
 Route::get('/', function () {
     return view('welcome');
@@ -125,13 +126,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/event/edit/{id}', [App\Http\Controllers\Admin\EventController::class, 'edit'])->name('admin.event.edit');
     Route::post('/event/update/{id}', [App\Http\Controllers\Admin\EventController::class, 'update'])->name('admin.event.update');
     Route::get('/event/destroy/{id}', [App\Http\Controllers\Admin\EventController::class, 'destroy'])->name('admin.event.destroy');
-    // Route::get('/team/destroyBanner/{id}', [App\Http\Controllers\Admin\EventController::class, 'destroyBanner'])->name('admin.team.destroyBanner');
-    // Route::get('/team/destroyImage/{id}', [App\Http\Controllers\Admin\EventController::class, 'destroyImage'])->name('admin.team.destroyImage');
+    Route::get('/team/destroyBanner/{id}', [App\Http\Controllers\Admin\EventController::class, 'destroyBanner'])->name('admin.team.destroyBanner');
+    Route::get('/team/destroyImage/{id}', [App\Http\Controllers\Admin\EventController::class, 'destroyImage'])->name('admin.team.destroyImage');
 
     Route::get('/volunteer', [App\Http\Controllers\Admin\VolunteerFormController::class, 'index'])->name('admin.volunteer.index');
     Route::get('/volunteer/view/{id}', [App\Http\Controllers\Admin\VolunteerFormController::class, 'show'])->name('admin.volunteer.view');
     Route::get('/volunteer/destroy/{id}', [App\Http\Controllers\Admin\VolunteerFormController::class, 'destroy'])->name('admin.volunteer.destroy');
 
+    // contact us form
     Route::get('/contact-us', [App\Http\Controllers\Admin\ContactUsFormController::class, 'index'])->name('admin.contact-us.index');
     Route::get('/contact-us/view/{id}', [App\Http\Controllers\Admin\ContactUsFormController::class, 'show'])->name('admin.contact-us.view');
     Route::get('/contact-us/destroy/{id}', [App\Http\Controllers\Admin\ContactUsFormController::class, 'destroy'])->name('admin.contact-us.destroy');
@@ -170,5 +172,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     //settings
     Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');
-
+    Route::post('/contact/update/{id}', [App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
 });

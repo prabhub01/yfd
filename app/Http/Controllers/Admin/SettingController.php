@@ -30,7 +30,6 @@ class SettingController extends Controller
      */
     public function create()
     {
-
     }
 
     /**
@@ -41,7 +40,6 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-
     }
 
     /**
@@ -63,7 +61,6 @@ class SettingController extends Controller
      */
     public function edit($id)
     {
-       
     }
 
     /**
@@ -75,21 +72,7 @@ class SettingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $details = Podcast::findOrFail($id);
-
-        $request->validate([
-            'title' => 'required',
-            'date' => 'required',
-            'podcast_link' => 'required'
-        ]);
-
-        $input = $request->all();
-        $input['is_active'] = isset($input['is_active']) ? 1 : 0;
-
-        $details->update($input);
-
-        alert()->success('Updated','Podcast Updated Successfully !');
-        return redirect()->route('admin.podcast.index');
+        
     }
 
     /**
@@ -100,10 +83,6 @@ class SettingController extends Controller
      */
     public function destroy($id)
     {
-        $details = Podcast::findOrFail($id);
-        $details->delete();
-        alert()->success('Deleted','Podcast Deleted Successfully !');
-
-        return redirect()->route('admin.podcast.index');
+       
     }
 }

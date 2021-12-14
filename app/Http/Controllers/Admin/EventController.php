@@ -17,7 +17,7 @@ class EventController extends Controller
     public function index()
     {
         $data = Event::get();
-        return view('backend.event.index',compact('data'));
+        return view('backend.event.index', compact('data'));
     }
 
     /**
@@ -64,7 +64,7 @@ class EventController extends Controller
         }
 
         Event::create($input);
-        alert()->success('Created','Event Created Successfully !');
+        alert()->success('Created', 'Event Created Successfully !');
 
         return redirect()->route('admin.event.index')
             ->with('success', 'Event Created Successfully.');
@@ -90,7 +90,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $details = Event::findOrFail($id);
-        return view('backend.event.edit',compact('details'));
+        return view('backend.event.edit', compact('details'));
     }
 
     /**
@@ -103,6 +103,7 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         $details = Event::findOrFail($id);
+        // dd($details);
 
         $request->validate([
             'description' => 'required',
@@ -116,8 +117,8 @@ class EventController extends Controller
         $input['is_active'] = isset($input['is_active']) ? 1 : 0;
 
         if ($image = $request->file('banner')) {
-            if (file_exists('uploads/events/banner/' . $details->banner) && !empty($details->banner)){
-                unlink("uploads/events/banner/".$details->banner);
+            if (file_exists('uploads/events/banner/' . $details->banner) && !empty($details->banner)) {
+                unlink("uploads/events/banner/" . $details->banner);
             }
             $destinationPath = 'uploads/events/banner/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
@@ -125,8 +126,8 @@ class EventController extends Controller
             $input['banner'] = "$profileImage";
         }
         if ($image = $request->file('image')) {
-            if (file_exists('uploads/events/image/' . $details->image) && !empty($details->image)){
-                unlink("uploads/events/image/".$details->image);
+            if (file_exists('uploads/events/image/' . $details->image) && !empty($details->image)) {
+                unlink("uploads/events/image/" . $details->image);
             }
             $destinationPath = 'uploads/events/image/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
@@ -150,14 +151,14 @@ class EventController extends Controller
     {
         $details = Event::findOrFail($id);
         $details->delete();
-        if (file_exists('uploads/events/image/' . $details->image) && !empty($details->image)){
-            unlink("uploads/events/image/".$details->image);
+        if (file_exists('uploads/events/image/' . $details->image) && !empty($details->image)) {
+            unlink("uploads/events/image/" . $details->image);
         }
-        if (file_exists('uploads/events/banner/' . $details->banner) && !empty($details->banner)){
-            unlink("uploads/events/banner/".$details->banner);
+        if (file_exists('uploads/events/banner/' . $details->banner) && !empty($details->banner)) {
+            unlink("uploads/events/banner/" . $details->banner);
         }
 
-        alert()->success('Deleted','Event Deleted Successfully !');
+        alert()->success('Deleted', 'Event Deleted Successfully !');
 
         // toast('Events Deleted Successfully!','success');
         return redirect()->route('admin.event.index')
@@ -167,7 +168,7 @@ class EventController extends Controller
     public function destroyBanner($id)
     {
         $details = Event::findOrFail($id);
-        unlink("uploads/events/banner/".$details->banner);
+        unlink("uploads/events/banner/" . $details->banner);
 
         return redirect()->route('admin.event.index')
             ->with('flash_success', 'Banner Image Deleted Successfully');
@@ -176,7 +177,7 @@ class EventController extends Controller
     public function destroyImage($id)
     {
         $details = Event::findOrFail($id);
-        unlink("uploads/events/image/".$details->image);
+        unlink("uploads/events/image/" . $details->image);
 
         return redirect()->route('admin.event.index')
             ->with('flash_success', 'Image Deleted Successfully');

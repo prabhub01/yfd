@@ -21,7 +21,7 @@ class CreateFoundersTable extends Migration
             $table->string('show_phone')->nullable();
             $table->string('show_email')->nullable();
             $table->string('designation')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->string('photo')->nullable();
             $table->string('fb_link')->nullable();
             $table->string('insta_link')->nullable();
