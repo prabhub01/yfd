@@ -82,6 +82,9 @@ Route::get('/thematic-areas', [App\Http\Controllers\ThematicAreasController::cla
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::get('/blog-details/{slug}', [App\Http\Controllers\BlogController::class, 'view'])->name('blog-details');
 
+//AGM Report
+Route::get('/annual-report', [App\Http\Controllers\annualReportController::class, 'index'])->name('agm-report');
+
 
 //SendEmail
 Route::post('/quick-enquiry', [App\Http\Controllers\EmailSubsController::class, 'store'])->name('quickEnquiry');
@@ -169,6 +172,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/podcast/edit/{id}', [App\Http\Controllers\Admin\PodcastController::class, 'edit'])->name('admin.podcast.edit');
     Route::post('/podcast/update/{id}', [App\Http\Controllers\Admin\PodcastController::class, 'update'])->name('admin.podcast.update');
     Route::get('/podcast/destroy/{id}', [App\Http\Controllers\Admin\PodcastController::class, 'destroy'])->name('admin.podcast.destroy');
+
+    Route::get('/annual-report', [App\Http\Controllers\Admin\AgmReportController::class, 'index'])->name('admin.annual-report.index');
+    Route::get('/annual-report/create', [App\Http\Controllers\Admin\AgmReportController::class, 'create'])->name('admin.annual-report.create');
+    Route::post('/annual-report/store', [App\Http\Controllers\Admin\AgmReportController::class, 'store'])->name('admin.annual-report.store');
+    Route::get('/annual-report/edit/{id}', [App\Http\Controllers\Admin\AgmReportController::class, 'edit'])->name('admin.annual-report.edit');
+    Route::post('/annual-report/update/{id}', [App\Http\Controllers\Admin\AgmReportController::class, 'update'])->name('admin.annual-report.update');
+    Route::get('/annual-report/destroy/{id}', [App\Http\Controllers\Admin\AgmReportController::class, 'destroy'])->name('admin.annual-report.destroy');
 
     //settings
     Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');

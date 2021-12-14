@@ -164,7 +164,8 @@
                                 Team</a>
                             <a class="dropdown-item" href="{{ route('our-founder') }}" style="color: black;">Our
                                 Founders</a>
-                            <a class="dropdown-item" href="#" style="color: black;">Annual Reports</a>
+                            <a class="dropdown-item" href="{{ route('agm-report') }}" style="color: black;">Annual
+                                Reports</a>
                             <a class="dropdown-item" href="#" style="color: black;">Financial
                                 Reports</a>
                         </div>

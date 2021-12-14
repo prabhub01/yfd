@@ -6,10 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use Alert;
+use App\Models\AgmReport;
 use App\Models\Blog;
 use App\Models\Podcast;
 
-class PodcastController extends Controller
+class AgmReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +19,8 @@ class PodcastController extends Controller
      */
     public function index()
     {
-        $data = Podcast::get();
-        return view('backend.podcast.index', compact('data'));
+        $data = AgmReport::get();
+        return view('backend.agm-report.index', compact('data'));
     }
 
     /**
@@ -29,7 +30,7 @@ class PodcastController extends Controller
      */
     public function create()
     {
-        return view('backend.podcast.create');
+        return view('backend.agm-report.create');
     }
 
     /**
@@ -43,16 +44,21 @@ class PodcastController extends Controller
         $request->validate([
             'title' => 'required',
             'date' => 'required',
-            'podcast_link' => 'required'
+            'file' => 'required'
         ]);
 
         $input = $request->all();
-        $input['is_active'] = isset($input['is_active']) ? 1 : 0;
 
-        Podcast::create($input);
-        alert()->success('Created', 'Podcast Created Successfully !');
+        if ($file = $request->file('file')) {
+            $destinationPath = 'uploads/agm-report/';
+            $profileImage = $request->title . "-" . date('Ymd') . "." . $file->getClientOriginalExtension();
+            $file->move($destinationPath, $profileImage);
+            $input['file'] = "$profileImage";
+        }
+        AgmReport::create($input);
+        alert()->success('Created', 'AGM Report Uploaded Successfully !');
 
-        return redirect()->route('admin.podcast.index');
+        return redirect()->route('admin.annual-report.index');
     }
 
     /**
@@ -74,8 +80,8 @@ class PodcastController extends Controller
      */
     public function edit($id)
     {
-        $details = Podcast::findOrFail($id);
-        return view('backend.podcast.edit', compact('details'));
+        $details = AgmReport::findOrFail($id);
+        return view('backend.agm-report.edit', compact('details'));
     }
 
     /**
@@ -87,21 +93,30 @@ class PodcastController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $details = Podcast::findOrFail($id);
+        $details = AgmReport::findOrFail($id);
 
         $request->validate([
             'title' => 'required',
             'date' => 'required',
-            'podcast_link' => 'required'
+            'file' => 'required'
         ]);
 
         $input = $request->all();
-        $input['is_active'] = isset($input['is_active']) ? 1 : 0;
+
+        if ($file = $request->file('file')) {
+            if (file_exists('uploads/agm-report/' . $details->file) && !empty($details->file)) {
+                unlink("uploads/agm-report/" . $details->file);
+            }
+            $destinationPath = 'uploads/agm-report/';
+            $profileImage = $request->title . "-" . date('Ymd') . "." . $file->getClientOriginalExtension();
+            $file->move($destinationPath, $profileImage);
+            $input['file'] = "$profileImage";
+        }
 
         $details->update($input);
 
-        alert()->success('Updated', 'Podcast Updated Successfully !');
-        return redirect()->route('admin.podcast.index');
+        alert()->success('Updated', 'AGM Report Updated Successfully !');
+        return redirect()->route('admin.annual-report.index');
     }
 
     /**
@@ -112,10 +127,13 @@ class PodcastController extends Controller
      */
     public function destroy($id)
     {
-        $details = Podcast::findOrFail($id);
+        $details = AgmReport::findOrFail($id);
+        if (file_exists('uploads/agm-report/' . $details->file) && !empty($details->file)) {
+            unlink("uploads/agm-report/" . $details->file);
+        }
         $details->delete();
-        alert()->success('Deleted', 'Podcast Deleted Successfully !');
+        alert()->success('Deleted', 'AGM Report Deleted Successfully !');
 
-        return redirect()->route('admin.podcast.index');
+        return redirect()->route('admin.annual-report.index');
     }
 }

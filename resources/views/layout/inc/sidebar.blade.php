@@ -44,6 +44,7 @@ $secondParam = Request::segment(2);
                 <a class="collapse-item" href="{{ route('admin.event.index') }}">Events</a>
                 <a class="collapse-item" href="{{ route('admin.blog.index') }}">Blogs</a>
                 <a class="collapse-item" href="{{ route('admin.podcast.index') }}">Podcast</a>
+                <a class="collapse-item" href="{{ route('admin.annual-report.index') }}">Annual Report</a>
             </div>
         </div>
     </li>
