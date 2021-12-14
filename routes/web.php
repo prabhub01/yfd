@@ -173,4 +173,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     //settings
     Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');
     Route::post('/contact/update/{id}', [App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
+    Route::post('/joinus/update/{id}', [App\Http\Controllers\Admin\JoinUssController::class, 'update'])->name('admin.join-us.update');
 });

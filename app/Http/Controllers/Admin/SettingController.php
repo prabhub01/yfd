@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Alert;
 use App\Models\Blog;
 use App\Models\ContactUsDetail;
+use App\Models\JoinUs;
 use App\Models\Podcast;
 
 class SettingController extends Controller
@@ -20,7 +21,12 @@ class SettingController extends Controller
     public function index()
     {
         $data = ContactUsDetail::first();
-        return view('backend.settings.index', compact('data'));
+        $joinus = JoinUs::first();
+
+        return view('backend.settings.index', compact(
+            'data',
+            'joinus'
+        ));
     }
 
     /**
@@ -72,7 +78,6 @@ class SettingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
     }
 
     /**
@@ -83,6 +88,5 @@ class SettingController extends Controller
      */
     public function destroy($id)
     {
-       
     }
 }

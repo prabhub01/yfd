@@ -189,211 +189,211 @@ h2::after {
         text-align: center;
         font-family: 'Brush Script MT', 'Brush Script Std', 'cursive';
     }
-
 </style>
 
 @extends('layout.frontend')
 @section('content')
-    <section class="bg-banner">
-        <img src="{{ url('/storage/banner/hill.jpg') }}" alt="Image Not Found" height="250px" width="100%">
-    </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb" style="background-color: #f2f7f8;">
-                        <li class="breadcrumb-item"><a href="#"> <i class="fas fa-home"></i> Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Join Us</li>
-                    </ol>
-                </nav>
-            </div>
+<section class="bg-banner">
+    <img src="{{ url('/storage/banner/hill.jpg') }}" alt="Image Not Found" height="250px" width="100%">
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" style="background-color: #f2f7f8;">
+                    <li class="breadcrumb-item"><a href="#"> <i class="fas fa-home"></i> Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Join Us</li>
+                </ol>
+            </nav>
         </div>
+    </div>
 
-        <div class="container">
-            <div class="row" style="margin-top: 20px;">
-                <div class="col-lg-12 col-md-12 col-12">
-                    <div class="_Ol_er_qw" style="text-align: center;">
-                        <p>
-                        <h3 class="title_h3">Join Our Mission</h3>
-                        </p>
-                        <p style="text-align: center;">
-                            We are always looking forward to having you become a part of us.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-12">
-                    <div class="_Ol_er_qw" style="text-align: center; margin-top: 50px;">
-                        <p>
-                        <h5 class="title_h3">Why to Join Our Team ?</h5>
-                        </p>
-                        <p style="text-align: center;">
-                            With 15 programs designed and implemented successfully, 3000+ youths connected to us, and 10 +
-                            partners associated with us, being a member
-                            of YFD/ YFD membership offers/means:
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row" style="padding-top: 20px;">
-                <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
-                    <div class="card border-primary">
-                        <div class="card-header" style="text-align: center;">Network expansion</div>
-                        <div class="card-body text-primary">
-                            <p class="card-text" style="text-align: justify; color: #000;">
-                                As a member of YFD, you will get ample opportunities to work with experts, civil society
-                                members, and youths from diverse backgrounds yet with similar interests, and to develop good
-                                relation with them.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
-                    <div class="card border-primary">
-                        <div class="card-header" style="text-align: center;">Professionalism</div>
-                        <div class="card-body text-primary">
-                            <p class="card-text" style="text-align: justify; color: #000;">
-                                Working in a professional environment and being a core part of our various professional
-                                development
-                                events, such as workshop, seminar, trainings, you will sharpen your professional skills.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
-                    <div class="card border-primary">
-                        <div class="card-header" style="text-align: center;">Learning and Growing opportunity</div>
-                        <div class="card-body text-primary">
-                            <p class="card-text" style="text-align: justify; color: #000;">
-                                The projects we conduct will help you gain abundant knowledge, experience,
-                                skills (leadership skills, social skills, time management skills) and the best use
-                                of your existing knowledge and experience.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
-                    <div class="card border-primary">
-                        <div class="card-header" style="text-align: center;">Profile raise</div>
-                        <div class="card-body text-primary">
-                            <p class="card-text" style="text-align: justify; color: #000;">
-                                The membership is bound to raise your profile in the professional community through various
-                                trainings we
-                                offer such as blog writing,
-                                report writing, podcast making, et cetera. You will collect competencies to better your
-                                resume.
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
-                    <div class="card border-primary">
-                        <div class="card-header" style="text-align: center;">Independence and leadership</div>
-                        <div class="card-body text-primary">
-                            <p class="card-text" style="text-align: justify; color: #000;">
-                                You get to work with a highly supportive and guiding team, who acknowledge your efforts and
-                                value
-                                your
-                                contributions. Members are highly encouraged to design, implement and take lead of projects
-                                and
-                                programs
-                                under our flagship.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
-                    <div class="card border-primary">
-                        <div class="card-header" style="text-align: center;">Future opportunities</div>
-                        <div class="card-body text-primary">
-                            <p class="card-text" style="text-align: justify; color: #000;">
-                                Once you become a member and serve the organization throughout your term, you are offered to
-                                work
-                                with us beyond your expectations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container" style="margin-bottom: 40px;">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-12">
-                    <div class="_Ol_er_qw" style="text-align: center; margin-top: 50px;">
-                        <p>
-                        <h3 class="title_h3">How to Apply ?</h3>
-                        </p>
-                        <p style="text-align: center;">
-                            YFD looks forward to work with enthusiastic youths between 18 to 25 years of age. Being a
-                            member,
-                            you will be able to discover your own
-                            potentialities through active engagement within its thematic areas of your interest. You simply
-                            need
-                            to fill up the online
-                            <a href="#"> membership form</a>. Once the application is reviewed from the team, YFD contacts
-                            you
-                            through email and proceed ahead with further process.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row" style="background-color: rgb(241, 239, 239);">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
             <div class="col-lg-12 col-md-12 col-12">
-                <div class="_Ol_er_qw" style="text-align: center; margin-top: 50px; padding-bottom: 50px; ">
+                <div class="_Ol_er_qw" style="text-align: center;">
                     <p>
-                    <h3 class="title_h3">Hear from our existing members </h3>
+                    <h3 class="title_h3">Join Our Mission</h3>
+                    </p>
+                    <p style="text-align: center;">
+                        We are always looking forward to having you become a part of us.
                     </p>
                 </div>
             </div>
-            <br> <br> <br>
+        </div>
+    </div>
 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: rgb(241, 239, 239);">
-                <!-- Carousel indicators -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="_Ol_er_qw" style="text-align: center; margin-top: 50px;">
+                    <p>
+                    <h5 class="title_h3">Why to Join Our Team ?</h5>
+                    </p>
+                    <p style="text-align: center;">
+                        With 15 programs designed and implemented successfully, 3000+ youths connected to us, and 10 +
+                        partners associated with us, being a member
+                        of YFD/ YFD membership offers/means:
 
-                <!-- Wrapper for carousel items -->
-                @if (isset($testimonial) && !$testimonial->isEmpty())
-                    <div class="carousel-inner">
-                        @foreach ($testimonial as $key => $testimonials)
-                            <div class="carousel-item @if ($key == 0) active @endif">
-                                <div class="img-box"><img
-                                        src="{{ url('/uploads/member-testimonial/' . $testimonials->image) }}"
-                                        alt="Testimonial Slider"></div>
-                                <p class="testimonial">{{ $testimonials->description }}
-                                </p>
-                                <p class="overview"><b>{{ $testimonials->name }}</b> <span class="p"> {{ $testimonials->post }} at
-                                      <strong> {{ $testimonials->company }} </strong> </span> </p>
-                            </div>
-                        @endforeach
-
-                    </div>
-                    <!-- Carousel controls -->
-                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                        <i class="fa fa-angle-left" style="color: #000;"></i>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                        <i class="fa fa-angle-right" style="color: #000;"></i>
-                    </a>
-                @else
-                    <p>Testimonial(s) Not Found</p>
-                @endif
+                    </p>
+                </div>
             </div>
         </div>
+
+        <div class="row" style="padding-top: 20px;">
+            <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
+                <div class="card border-primary">
+                    <div class="card-header" style="text-align: center;">Network expansion</div>
+                    <div class="card-body text-primary">
+                        <p class="card-text" style="text-align: justify; color: #000;">
+                            As a member of YFD, you will get ample opportunities to work with experts, civil society
+                            members, and youths from diverse backgrounds yet with similar interests, and to develop good
+                            relation with them.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
+                <div class="card border-primary">
+                    <div class="card-header" style="text-align: center;">Professionalism</div>
+                    <div class="card-body text-primary">
+                        <p class="card-text" style="text-align: justify; color: #000;">
+                            Working in a professional environment and being a core part of our various professional
+                            development
+                            events, such as workshop, seminar, trainings, you will sharpen your professional skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
+                <div class="card border-primary">
+                    <div class="card-header" style="text-align: center;">Learning and Growing opportunity</div>
+                    <div class="card-body text-primary">
+                        <p class="card-text" style="text-align: justify; color: #000;">
+                            The projects we conduct will help you gain abundant knowledge, experience,
+                            skills (leadership skills, social skills, time management skills) and the best use
+                            of your existing knowledge and experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
+                <div class="card border-primary">
+                    <div class="card-header" style="text-align: center;">Profile raise</div>
+                    <div class="card-body text-primary">
+                        <p class="card-text" style="text-align: justify; color: #000;">
+                            The membership is bound to raise your profile in the professional community through various
+                            trainings we
+                            offer such as blog writing,
+                            report writing, podcast making, et cetera. You will collect competencies to better your
+                            resume.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
+                <div class="card border-primary">
+                    <div class="card-header" style="text-align: center;">Independence and leadership</div>
+                    <div class="card-body text-primary">
+                        <p class="card-text" style="text-align: justify; color: #000;">
+                            You get to work with a highly supportive and guiding team, who acknowledge your efforts and
+                            value
+                            your
+                            contributions. Members are highly encouraged to design, implement and take lead of projects
+                            and
+                            programs
+                            under our flagship.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-6" style="margin-bottom: 20px;">
+                <div class="card border-primary">
+                    <div class="card-header" style="text-align: center;">Future opportunities</div>
+                    <div class="card-body text-primary">
+                        <p class="card-text" style="text-align: justify; color: #000;">
+                            Once you become a member and serve the organization throughout your term, you are offered to
+                            work
+                            with us beyond your expectations.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div class="container" style="margin-bottom: 40px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="_Ol_er_qw" style="text-align: center; margin-top: 50px;">
+                    <p>
+                    <h3 class="title_h3">How to Apply ?</h3>
+                    </p>
+                    <p style="text-align: center;">
+                        YFD looks forward to work with enthusiastic youths between 18 to 25 years of age. Being a
+                        member,
+                        you will be able to discover your own
+                        potentialities through active engagement within its thematic areas of your interest. You simply
+                        need
+                        to fill up the online
+                        <a href="{{$formlink->link_to_membership_form}}" target="_blank"> membership form</a>. Once the
+                        application is
+                        reviewed from the team, YFD contacts
+                        you
+                        through email and proceed ahead with further process.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="background-color: rgb(241, 239, 239);">
+        <div class="col-lg-12 col-md-12 col-12">
+            <div class="_Ol_er_qw" style="text-align: center; margin-top: 50px; padding-bottom: 50px; ">
+                <p>
+                <h3 class="title_h3">Hear from our existing members </h3>
+                </p>
+            </div>
+        </div>
+        <br> <br> <br>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: rgb(241, 239, 239);">
+            <!-- Carousel indicators -->
+
+            <!-- Wrapper for carousel items -->
+            @if (isset($testimonial) && !$testimonial->isEmpty())
+            <div class="carousel-inner">
+                @foreach ($testimonial as $key => $testimonials)
+                <div class="carousel-item @if ($key == 0) active @endif">
+                    <div class="img-box"><img src="{{ url('/uploads/member-testimonial/' . $testimonials->image) }}"
+                            alt="Testimonial Slider"></div>
+                    <p class="testimonial">{{ $testimonials->description }}
+                    </p>
+                    <p class="overview"><b>{{ $testimonials->name }}</b> <span class="p"> {{ $testimonials->post }} at
+                            <strong> {{ $testimonials->company }} </strong> </span> </p>
+                </div>
+                @endforeach
+
+            </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <i class="fa fa-angle-left" style="color: #000;"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <i class="fa fa-angle-right" style="color: #000;"></i>
+            </a>
+            @else
+            <p>Testimonial(s) Not Found</p>
+            @endif
+        </div>
+    </div>
+    </div>
 
     @endsection

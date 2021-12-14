@@ -80,19 +80,27 @@
 
                     {{-- for joinus --}}
                     <div class="tab-pane fade" id="joinUs" role="tabpanel" aria-labelledby="joinUs-tab">
-                        <div class="col-12">
-                            <div class="card card-custom gutter-b">
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label class="control-label">Link to Membership Form</label>
-                                        <span class="text-danger">*</span>
-                                        <div class="custom-file">
-                                            <input class="form-control" name="location" type="text" value="">
+                        <form method="post" action="{{ route('admin.join-us.update', 1) }}" accept-charset="UTF-8"
+                            class="form-horizontal" enctype="multipart/form-data" style="width: 100%;">
+                            @csrf
+                            <div class="col-12">
+                                <div class="card card-custom gutter-b">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label class="control-label">Link to Membership Form</label>
+                                            <span class="text-danger">*</span>
+                                            <div class="custom-file">
+                                                <input class="form-control" name="link_to_membership_form" type="text"
+                                                    value="{{$joinus->link_to_membership_form}}">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div style="margin:1rem 0 1rem 1rem;">
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

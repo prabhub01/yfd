@@ -5,14 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ContactUsDetail extends Model
+class JoinUs extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'location',
-        'email',
-        'contact',
-        'google_map'
+        'link_to_membership_form'
     ];
 }

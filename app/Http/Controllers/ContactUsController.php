@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUsDetail;
 use App\Models\ContactUsForm;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,8 @@ class ContactUsController extends Controller
 {
     public function index()
     {
-        return view('frontend.contactUs');
+        $data = ContactUsDetail::first();
+        return view('frontend.contactUs', compact('data'));
     }
 
 
