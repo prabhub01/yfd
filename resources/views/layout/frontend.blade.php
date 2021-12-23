@@ -166,8 +166,8 @@
                                 Founders</a>
                             <a class="dropdown-item" href="{{ route('agm-report') }}" style="color: black;">Annual
                                 Reports</a>
-                            <a class="dropdown-item" href="#" style="color: black;">Financial
-                                Reports</a>
+                            {{-- <a class="dropdown-item" href="#" style="color: black;">Financial
+                                Reports</a> --}}
                         </div>
                     </li>
                     <li class="nav-item"><a href="{{ route('thematic-areas') }}" class="nav-link">Thematic

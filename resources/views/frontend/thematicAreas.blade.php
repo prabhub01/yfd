@@ -17,11 +17,11 @@
 
         <section class="se-001">
             <div class="container">
-                <div class="row">
+                <div class="row" style="padding:0px 10px 0px 10px;">
                     <span style="margin-bottom: 30px;">Our activities, though numerous, can be broadly be classified into 3
                         major themes:</span>
                     <h3 style="margin-bottom: 10px;">Promoting Legal and Political Awareness and Discourses</h3>
-                    <div style="width: 40%; float: left; text-align: justify; padding-right:3rem;">
+                    <div style="width: 45%; float: left; text-align: justify; padding-right:3rem;">
                         <strong>Promoting Knowledge Synthesis: </strong> In today’s increasingly sophisticated world where
                         the rate of sophistication is proliferating, being attuned to these changes is vital. This means
                         policymakers should be aware of these looming changes and should proactively come up with policy
@@ -33,7 +33,7 @@
                         establishing YFD as a watchdog to provide analysis and recommendations to politicians, policymakers,
                         researchers, and civil society organizations.
                     </div>
-                    <div style="width: 60%; float: right; text-align: justify;">
+                    <div style="width: 55%; float: right; text-align: justify;">
                         <strong> Promoting Knowledge dissemination and discourse: </strong> The creation of knowledge is
                         just the initial step towards keeping up with the time as the citizenry needs to be aware of these
                         impending changes and the challenges that accompany them.
@@ -55,7 +55,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="margin-top: 20px;">
+                <div class="row" style="margin-top: 20px; padding:0px 10px 0px 10px;">
                     <h3 style="width: 100%;">Youth Empowerment</h3>
                     <span style="margin-bottom: 20px;">YFD, being a youth-run and youth-led organisation, places tremendous
                         focus on youth empowerment.
@@ -91,7 +91,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="margin-top: 20px;">
+                <div class="row" style="margin-top: 20px; padding:0px 10px 0px 10px;">
                     <h3 style="width: 100%;">Progressive Community building</h3>
                     <span style="margin-bottom: 20px; text-align: justify;">
                         In addition to propagating political and legal discourses, we seek to create communities of
