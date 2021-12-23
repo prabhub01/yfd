@@ -29,17 +29,10 @@ $currentURL = URL::current();
     <meta property="og:url" content="{{ $currentURL }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="@yield('title')" />
+    {{-- <meta property="og:title" content="@yield('title')" /> --}}
     <meta property="og:description" content="You can learn more about this. Click on the link." />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://www.yfd.org.np/img/no-image.png" />
-    
-
-    {{-- <meta property="og:type" content='website" />
-    <meta property="og:title" content=' Mafindoor - SM City Legazpi" />
-    <meta property="og:image" content="http://mafindoor.com/img/pages/screen2.jpg">
-    <meta property="og:description" content="Thanks Mafindoor for helping me find my ways inside SM City Legazpi">
-    <meta property="og:url" content="http://dev.mafindoor.com">
-    <meta property="fb:app_id" content="329159957633823"> --}}
     
     
     <style>
