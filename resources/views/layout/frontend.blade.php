@@ -31,7 +31,7 @@ $currentURL = URL::current();
     <meta property="og:title" content="@yield('title')" />
     <meta property="og:description" content="You can learn more about this. Click on the link." />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://www.yfd.org.np/img/no-img.png" />
+    <meta property="og:image" content="https://www.yfd.org.np/img/no-image.png" />
     
 
     {{-- <meta property="og:type" content='website" />
