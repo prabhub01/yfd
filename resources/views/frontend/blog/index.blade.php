@@ -29,7 +29,11 @@
                         @if (file_exists('uploads/blogs/image/' . $blog->image) && !empty($blog->image))
                         <img src="{{ asset('uploads/blogs/image/' . $blog->image) }}" alt="Image Not found" srcset=""
                             width="100%" height="100%">
+                        @else
+                        <img src="{{ asset('img/' . 'no-image.png') }}" alt="Image Not found" srcset="" width="100%"
+                            height="100%">
                         @endif
+
                         <div class="card-body">
                             <a href="{{ route('blog-details', $blog->slug) }}">
                                 <h4 class="card-text">{{ $blog->title }} </h4>
