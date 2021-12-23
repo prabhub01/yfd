@@ -2,7 +2,7 @@
 @section('content')
 
 <section class="bg-banner">
-    <img src="{{ asset('storage/banner/' . 'hill1.jpg') }}" alt="" height="250px" width="100%">
+    <img src="{{ asset('storage/banner/' . 'hill.jpg') }}" alt="" height="250px" width="100%">
     {{-- @if
     (file_exists('uploads/events/banner/' . $data->image) && !empty($data->image))
     <img src="/uploads/events/banner/{{ $data->image }}" alt="Image Not found" srcset="" width="100%" height="250px">
