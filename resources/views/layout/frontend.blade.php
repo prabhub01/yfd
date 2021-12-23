@@ -1,3 +1,8 @@
+@php
+$currentURL = URL::current();
+@endphp
+
+
 <!doctype html>
 <html lang="en">
 
@@ -17,6 +22,16 @@
     <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <meta property="og:url" content="{{ $currentURL }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('title')" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://www.yfd.org.np/img/yfdLogo.png" />
+    
+    
+    
     <style>
         .nav-link {
             color: #fff;
