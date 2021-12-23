@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $admins = [
-            ['name' => 'Superadmin', 'email' => 'superadmin@pndc.com', 'password' => bcrypt('password')],
+            ['name' => 'Superadmin', 'email' => 'superadmin@yfd.org.np', 'password' => bcrypt('yfd.admin@2021')],
             ['name' => 'Prabhu Budhathoki', 'email' => 'prabhu.byn@gmail.com', 'password' => bcrypt('password')],
         ];
         \DB::table('users')->insert($admins);

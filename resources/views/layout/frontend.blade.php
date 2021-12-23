@@ -302,11 +302,11 @@ $currentURL = URL::current();
                                     <i class="fas fa-angle-double-right"></i>Home
                                 </li>
                             </a>
-                            <a href="{{ route('login') }}">
+                            {{-- <a href="{{ route('login') }}">
                                 <li>
                                     <i class="fas fa-angle-double-right"></i>Admin Login
                                 </li>
-                            </a>
+                            </a> --}}
                         </ol>
                     </div>
                 </div>

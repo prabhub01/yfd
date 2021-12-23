@@ -98,7 +98,7 @@ Route::post('/quick-enquiry', [App\Http\Controllers\EmailSubsController::class, 
 
 
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'yfdsystem/admin', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::post('/images/upload', [App\Http\Controllers\Admin\CkeditorController::class, 'upload'])->name('ckeditor.image-upload');
 
