@@ -7,7 +7,7 @@
     <section class="se-001">
         <div class="container">
             <div class="row">
-                <p style="text-align: justify; margin-top: 20px">
+                <p style="text-align: justify; margin-top: 20px; padding:0px 10px 0px 10px;">
                     <strong> YFD Blog </strong> is an initiative of Youth in Federal Discourse (YFD) to foster reading and
                     writing culture among the youth in regards to federalism,
                     government policies and, laws of Nepal. We post the opinions from the youths regarding the issues
