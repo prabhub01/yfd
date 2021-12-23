@@ -12,9 +12,12 @@ $currentURL = URL::current();
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/yfd-logo-only.png') }}">
     <title>YFD || Youth in Federal Discourse</title>
 
-
-    {{--
-    <link rel="stylesheet" href="{{ asset('/frontend/css/bootstrap.min.css') }}"> --}}
+    <meta name="description" content="{{ config('app.name') }}">
+    <meta name="keywords" content="{{ config('app.name') }}">
+    <meta name="author" content="{{ config('app.name') }}">
+    
+    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:version" content="4.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('/frontend/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('/frontend/css/responsive.css') }}">
