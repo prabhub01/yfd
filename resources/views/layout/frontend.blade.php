@@ -213,11 +213,11 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('blog') }}" style="color: black;">Blogs</a>
                             <a class="dropdown-item" href="{{ route('podcast') }}" style="color: black;">Podcasts</a>
-                            <a class="dropdown-item" href="#" style="color: black;">Newspaper
-                                Articles</a>
+                            {{-- <a class="dropdown-item" href="#" style="color: black;">Newspaper
+                                Articles</a> --}}
                             {{-- <a class="dropdown-item" href="#" style="color: black;">Infographics</a> --}}
-                            <a class="dropdown-item" href="#" style="color: black;">Journals</a>
-                            <a class="dropdown-item" href="#" style="color: black;">Policy Analysis</a>
+                            {{-- <a class="dropdown-item" href="#" style="color: black;">Journals</a>
+                            <a class="dropdown-item" href="#" style="color: black;">Policy Analysis</a> --}}
                         </div>
                     </li>
                     <li class="nav-item"><a href="{{ route('contact-us') }}" class="nav-link">Contact</a>
