@@ -28,7 +28,7 @@ $currentURL = URL::current();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <meta property="og:url" content="{{ $currentURL }}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="@yield('title')" />
     <meta property="og:description" content="@yield('desc')" />
     <meta property="og:locale" content="en_US" />
