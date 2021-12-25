@@ -192,6 +192,7 @@ h2::after {
 </style>
 
 @extends('layout.frontend')
+@section('title', 'Join Us')
 @section('content')
 <section class="bg-banner">
     <img src="{{ url('/storage/banner/hill.jpg') }}" alt="Image Not Found" height="250px" width="100%">

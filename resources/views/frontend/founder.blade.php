@@ -127,6 +127,7 @@
     }
 </style>
 @extends('layout.frontend')
+@section('title', 'Founders')
 @section('content')
 <section class="bg-banner">
     <img src="{{url('/storage/banner/hill.jpg')}}" alt="Image Not found" srcset="" height="250px" width="100%">

@@ -10,7 +10,8 @@ $currentURL = URL::current();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/yfd-logo-only.png') }}">
-    <title>YFD || Youth in Federal Discourse</title>
+    <title>@yield('title') | YFD</title>
+    {{-- <title>YFD || Youth in Federal Discourse</title> --}}
 
     <meta name="description" content="{{ config('app.name') }}">
     <meta name="keywords" content="{{ config('app.name') }}">
@@ -29,11 +30,9 @@ $currentURL = URL::current();
     <meta property="og:url" content="{{ $currentURL }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="@yield('title')" />
-    {{--
-    <meta property="og:title" content="@yield('title')" /> --}}
-    <meta property="og:description" content="You can learn more about this. Click on the link." />
+    <meta property="og:description" content="@yield('desc')" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://www.yfd.org.np/img/no-image.png" />
+    <meta property="og:image" content="https://www.yfd.org.np/img/yfd_cover.png" />
 
 
     <style>

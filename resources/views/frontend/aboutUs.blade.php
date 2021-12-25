@@ -1,4 +1,5 @@
 @extends('layout.frontend')
+@section('title', 'About Us')
 {{-- @section('content')
 <section class="bg-banner">
     @if (file_exists('uploads/about-us/banner/' . $data->banner) && !empty($data->banner))

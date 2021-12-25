@@ -255,6 +255,7 @@
     }
 </style>
 @extends('layout.frontend')
+@section('title', 'Home')
 @section('content')
 
 <div class="">

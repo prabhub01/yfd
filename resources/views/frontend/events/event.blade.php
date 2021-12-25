@@ -1,4 +1,5 @@
 @extends('layout.frontend')
+@section('title', 'Events')
 @section('content')
 
 <section class="bg-banner">
@@ -35,8 +36,8 @@
                         <img src="/uploads/events/image/{{ $event->image }}" alt="Image Not found" srcset=""
                             width="100%" height="100%">
                         @else
-                        <img src="{{ asset('img/' . 'no-image.png') }}" alt="Image Not found" srcset=""
-                            width="100%" height="100%">
+                        <img src="{{ asset('img/' . 'no-image.png') }}" alt="Image Not found" srcset="" width="100%"
+                            height="100%">
                         @endif
                         <div class="card-body">
                             <a href="{{ route('event-details', $event->slug) }}">
