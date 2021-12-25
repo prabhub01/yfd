@@ -1,5 +1,6 @@
 @extends('layout.frontend')
 @section('title', 'Partner With Us')
+@section('desc', 'Partner With Us')
 @section('content')
 <section class="bg-banner">
     {{-- @if (file_exists('uploads/team/' . $team->photo) && !empty($team->photo))

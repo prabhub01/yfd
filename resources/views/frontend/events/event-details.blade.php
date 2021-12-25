@@ -1,5 +1,6 @@
 @extends('layout.frontend')
 @section('title', 'Events - '. $data->title)
+@section('desc', $data->description)
 @section('content')
 <section class="bg-banner">
     <img src="{{ asset('storage/banner/' . 'hill.jpg') }}" alt="" height="250px" width="100%">

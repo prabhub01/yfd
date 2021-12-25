@@ -1,5 +1,6 @@
 @extends('layout.frontend')
 @section('title', 'Downloads')
+@section('desc', 'Click to download')
 @section('content')
 <section class="bg-banner">
     <img src="{{ url('/storage/banner/hill.jpg') }}" alt="Image Not Found" height="250px" width="100%">

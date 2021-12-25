@@ -1,5 +1,6 @@
 @extends('layout.frontend')
 @section('title', 'Events')
+@section('desc', 'Do not miss our regular events')
 @section('content')
 
 <section class="bg-banner">

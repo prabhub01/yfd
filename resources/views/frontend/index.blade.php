@@ -256,6 +256,7 @@
 </style>
 @extends('layout.frontend')
 @section('title', 'Home')
+@section('desc', 'We are a group of young enthusiasts who thrive in every circumstance. We are continuously moving')
 @section('content')
 
 <div class="">

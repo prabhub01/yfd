@@ -1,5 +1,6 @@
 @extends('layout.frontend')
 @section('title', 'Blogs - '. $data->title)
+@section('desc', $data->excerpt)
 @section('content')
 @if (file_exists('uploads/blogs/banner/' . $data->banner) && !empty($data->banner))
 <img src="{{ asset('uploads/blogs/banner/' . $data->banner) }}" alt="Not found" srcset="" width="100%" height="250px">
