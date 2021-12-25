@@ -15,7 +15,7 @@ $currentURL = URL::current();
     <meta name="description" content="{{ config('app.name') }}">
     <meta name="keywords" content="{{ config('app.name') }}">
     <meta name="author" content="{{ config('app.name') }}">
-    
+
     <meta name="docsearch:language" content="en">
     <meta name="docsearch:version" content="4.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -25,16 +25,17 @@ $currentURL = URL::current();
     <link rel="stylesheet" href="{{ asset('/frontend/css/style.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
+
     <meta property="og:url" content="{{ $currentURL }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="@yield('title')" />
-    {{-- <meta property="og:title" content="@yield('title')" /> --}}
+    {{--
+    <meta property="og:title" content="@yield('title')" /> --}}
     <meta property="og:description" content="You can learn more about this. Click on the link." />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://www.yfd.org.np/img/no-image.png" />
-    
-    
+
+
     <style>
         .nav-link {
             color: #fff;
@@ -159,8 +160,9 @@ $currentURL = URL::current();
                 <!-- Logo Image -->
                 {{-- <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45"
                     alt="" class="d-inline-block align-middle mr-2"> --}}
-                <a href="{{ route('index') }}"> <img src="{{ asset('img/yfdLogo.png') }}"> </a>
-                <!-- Logo Text -->
+                <a href="{{ route('index') }}"> <img src="{{ asset('img/logo.svg') }}" height="70px"> </a>
+
+                {{-- <img src="{{ asset('img/logo.svg') }}" style="height: 90px;" /> --}}
             </a>
 
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
