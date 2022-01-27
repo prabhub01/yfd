@@ -338,17 +338,7 @@ h2::after {
                     <h3 class="title_h3">How to Apply ?</h3>
                     </p>
                     <p style="text-align: center;">
-                        YFD looks forward to work with enthusiastic youths between 18 to 25 years of age. Being a
-                        member,
-                        you will be able to discover your own
-                        potentialities through active engagement within its thematic areas of your interest. You simply
-                        need
-                        to fill up the online
-                        <a href="{{$formlink->link_to_membership_form}}" target="_blank"> membership form</a>. Once the
-                        application is
-                        reviewed from the team, YFD contacts
-                        you
-                        through email and proceed ahead with further process.
+                        {!!$formlink->description!!}
                     </p>
                 </div>
             </div>

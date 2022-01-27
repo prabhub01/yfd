@@ -86,12 +86,20 @@
                             <div class="col-12">
                                 <div class="card card-custom gutter-b">
                                     <div class="card-body">
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label class="control-label">Link to Membership Form</label>
                                             <span class="text-danger">*</span>
                                             <div class="custom-file">
                                                 <input class="form-control" name="link_to_membership_form" type="text"
                                                     value="{{$joinus->link_to_membership_form}}">
+                                            </div>
+                                        </div> --}}
+                                        <div class="form-group">
+                                            <label class="control-label">How to Apply ?</label>
+                                            <span class="text-danger">*</span>
+                                            <div class="custom-file">
+                                                   <textarea class="form-control ckeditor" name="description" id="" cols="30"
+                                                        rows="10">{{ $joinus->description }}</textarea>
                                             </div>
                                         </div>
                                     </div>

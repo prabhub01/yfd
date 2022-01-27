@@ -10,6 +10,7 @@ class JoinUs extends Model
     use HasFactory;
 
     protected $fillable = [
-        'link_to_membership_form'
+        'link_to_membership_form',
+        'description'
     ];
 }
