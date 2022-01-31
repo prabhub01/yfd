@@ -64,7 +64,7 @@
                     <span style="text-align: center; color: #2393c0;"> <i class="fas fa-users fa-6x"></i>
                     </span>
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align: center;">Reach a largerr audience</h5>
+                        <h5 class="card-title" style="text-align: center;">Reach a larger audience</h5>
                         <p class="card-text" style="text-align: justify;">With our broad spectrum of partnerships
                             and networks, you will be introduced to new audiences, expanding your coverage. In hand, you
                             will be able to pitch your working areas and strategies to develop corporate houses and

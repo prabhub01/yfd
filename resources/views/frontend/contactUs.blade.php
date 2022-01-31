@@ -83,10 +83,10 @@
                 <div class="col-12">
                     <div class="heading">
                         <h2 style="color:rgb(17, 16, 16);">Get In Touch With us</h2>
-                        <p style="color:rgb(19, 18, 18);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                        {{-- <p style="color:rgb(19, 18, 18);">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                             do
                             eiusmod tempor incididunt
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </div>

@@ -147,7 +147,7 @@
 
     <section id="team" class="pb-5">
         <div class="container">
-            <h4 class="section-title">Presentining you our energy to move ahead</h4>
+            <h4 class="section-title">Presenting you our energy to move ahead</h4>
             <div class="row">
 
                 <!-- Team member -->
