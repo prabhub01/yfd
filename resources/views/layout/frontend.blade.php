@@ -181,6 +181,8 @@ $currentURL = URL::current();
                                 Us</a>
                             <a class="dropdown-item" href="{{ route('our-team') }}" style="color: black;">Our
                                 Team</a>
+                            <a class="dropdown-item" href="{{ route('old-team') }}" style="color: black;">Old
+                                Team</a>
                             <a class="dropdown-item" href="{{ route('our-founder') }}" style="color: black;">Our
                                 Founders</a>
                             <a class="dropdown-item" href="{{ route('agm-report') }}" style="color: black;">Annual
@@ -202,10 +204,12 @@ $currentURL = URL::current();
                             <a class="dropdown-item" href="{{ route('join-us') }}" style="color: black;">Become a
                                 member</a>
                             <a class="dropdown-item" href="{{ route('volunteer') }}" style="color: black;">Volunteer</a>
-                            {{-- <a class="dropdown-item" href="{{ route('donate') }}" style="color: black;">Donate</a> --}}
+                            {{-- <a class="dropdown-item" href="{{ route('donate') }}" style="color: black;">Donate</a>
+                            --}}
                             <a class="dropdown-item" href="{{ route('write-for-us') }}" style="color: black;">Write
                                 for us</a>
-                            {{-- <a class="dropdown-item" href="{{ route('speak-with-us') }}" style="color: black;">Speak
+                            {{-- <a class="dropdown-item" href="{{ route('speak-with-us') }}"
+                                style="color: black;">Speak
                                 with us</a> --}}
                         </div>
                     </li>

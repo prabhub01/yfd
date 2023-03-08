@@ -47,6 +47,10 @@ Route::post('/volunteer-submit', [App\Http\Controllers\VolunteerController::clas
 //Our Team and Founder
 Route::get('/our-team', [App\Http\Controllers\TeamController::class, 'index'])->name('our-team');
 Route::get('/our-founder', [App\Http\Controllers\TeamController::class, 'founder'])->name('our-founder');
+Route::get('/old-team', [App\Http\Controllers\TeamController::class, 'oldTeam'])->name('old-team');
+Route::post('/old-team', [App\Http\Controllers\TeamController::class, 'oldTeamSearch'])->name('old-team.search');
+
+
 
 
 //Speak With Us
@@ -109,6 +113,14 @@ Route::group(['prefix' => 'yfdsystem/admin', 'middleware' => 'auth'], function (
     Route::post('/team/update/{id}', [App\Http\Controllers\Admin\TeamController::class, 'update'])->name('admin.team.update');
     Route::get('/team/destroy/{id}', [App\Http\Controllers\Admin\TeamController::class, 'destroy'])->name('admin.team.destroy');
     Route::get('/team/destroyImage/{id}', [App\Http\Controllers\Admin\TeamController::class, 'destroyImage'])->name('admin.team.destroyImage');
+
+    Route::get('/old-team', [App\Http\Controllers\Admin\OldTeamController::class, 'index'])->name('admin.old-team.index');
+    Route::get('/old-team/create', [App\Http\Controllers\Admin\OldTeamController::class, 'create'])->name('admin.old-team.create');
+    Route::post('/old-team/store', [App\Http\Controllers\Admin\OldTeamController::class, 'store'])->name('admin.old-team.store');
+    Route::get('/old-team/edit/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'edit'])->name('admin.old-team.edit');
+    Route::post('/old-team/update/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'update'])->name('admin.old-team.update');
+    Route::get('/old-team/destroy/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'destroy'])->name('admin.old-team.destroy');
+    Route::get('/old-team/destroyImage/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'destroyImage'])->name('admin.old-team.destroyImage');
 
     Route::get('/founder', [App\Http\Controllers\Admin\FounderController::class, 'index'])->name('admin.founder.index');
     Route::get('/founder/create', [App\Http\Controllers\Admin\FounderController::class, 'create'])->name('admin.founder.create');
