@@ -114,13 +114,13 @@ Route::group(['prefix' => 'yfdsystem/admin', 'middleware' => 'auth'], function (
     Route::get('/team/destroy/{id}', [App\Http\Controllers\Admin\TeamController::class, 'destroy'])->name('admin.team.destroy');
     Route::get('/team/destroyImage/{id}', [App\Http\Controllers\Admin\TeamController::class, 'destroyImage'])->name('admin.team.destroyImage');
 
-    Route::get('/old-team', [App\Http\Controllers\Admin\OldTeamController::class, 'index'])->name('admin.old-team.index');
-    Route::get('/old-team/create', [App\Http\Controllers\Admin\OldTeamController::class, 'create'])->name('admin.old-team.create');
-    Route::post('/old-team/store', [App\Http\Controllers\Admin\OldTeamController::class, 'store'])->name('admin.old-team.store');
-    Route::get('/old-team/edit/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'edit'])->name('admin.old-team.edit');
-    Route::post('/old-team/update/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'update'])->name('admin.old-team.update');
-    Route::get('/old-team/destroy/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'destroy'])->name('admin.old-team.destroy');
-    Route::get('/old-team/destroyImage/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'destroyImage'])->name('admin.old-team.destroyImage');
+    // Route::get('/old-team', [App\Http\Controllers\Admin\OldTeamController::class, 'index'])->name('admin.old-team.index');
+    // Route::get('/old-team/create', [App\Http\Controllers\Admin\OldTeamController::class, 'create'])->name('admin.old-team.create');
+    // Route::post('/old-team/store', [App\Http\Controllers\Admin\OldTeamController::class, 'store'])->name('admin.old-team.store');
+    // Route::get('/old-team/edit/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'edit'])->name('admin.old-team.edit');
+    // Route::post('/old-team/update/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'update'])->name('admin.old-team.update');
+    // Route::get('/old-team/destroy/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'destroy'])->name('admin.old-team.destroy');
+    // Route::get('/old-team/destroyImage/{id}', [App\Http\Controllers\Admin\OldTeamController::class, 'destroyImage'])->name('admin.old-team.destroyImage');
 
     Route::get('/founder', [App\Http\Controllers\Admin\FounderController::class, 'index'])->name('admin.founder.index');
     Route::get('/founder/create', [App\Http\Controllers\Admin\FounderController::class, 'create'])->name('admin.founder.create');

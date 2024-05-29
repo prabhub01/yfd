@@ -67,7 +67,6 @@ $secondParam = Request::segment(2);
                 {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
                 <a class="collapse-item" href="{{ route('admin.founder.index') }}">Founders</a>
                 <a class="collapse-item" href="{{ route('admin.team.index') }}">Teams</a>
-                <a class="collapse-item" href="{{ route('admin.old-team.index') }}">Old Teams</a>
             </div>
         </div>
     </li>

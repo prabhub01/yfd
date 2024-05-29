@@ -599,7 +599,7 @@
                         <i class=" fas fa-school"></i>
                     </div>
                     <h3 style="margin-top: -20px;">Youth directly reached </h3>
-                    <span class="counter-value">600 </span> <span style="font-size: 25px;">+ </span>
+                    <span class="counter-value">2000 </span> <span style="font-size: 25px;">+ </span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -608,7 +608,7 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3 style="margin-top: -7px;">Organisations Partnered</h3>
-                    <span class="counter-value">12</span> <span style="font-size: 25px;">+ </span>
+                    <span class="counter-value">25</span> <span style="font-size: 25px;">+ </span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
@@ -617,7 +617,7 @@
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <h3>Programs Conducted</h3>
-                    <span class="counter-value">16</span> <span style="font-size: 25px;">+ </span>
+                    <span class="counter-value">30</span> <span style="font-size: 25px;">+ </span>
                 </div>
             </div>
         </div>

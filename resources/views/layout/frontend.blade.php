@@ -181,8 +181,8 @@ $currentURL = URL::current();
                                 Us</a>
                             <a class="dropdown-item" href="{{ route('our-team') }}" style="color: black;">Our
                                 Team</a>
-                            <a class="dropdown-item" href="{{ route('old-team') }}" style="color: black;">Old
-                                Team</a>
+                            <!-- <a class="dropdown-item" href="{{ route('old-team') }}" style="color: black;">Old
+                                Team</a> -->
                             <a class="dropdown-item" href="{{ route('our-founder') }}" style="color: black;">Our
                                 Founders</a>
                             <a class="dropdown-item" href="{{ route('agm-report') }}" style="color: black;">Annual
@@ -368,7 +368,7 @@ $currentURL = URL::current();
 
                 <div class="col-12">
                     <div class="copy-right">
-                        <span style="float: left; color: rgb(184, 174, 174);">© 2021 All Rights Reserved by YFD </span>
+                        <span style="float: left; color: rgb(184, 174, 174);">© 2021 - {{ date('Y') }} | All Rights Reserved by YFD </span>
                         <span style="float: right; color: rgb(177, 168, 168);">
                             <\> with ❤️ by Prabhu
                         </span>
